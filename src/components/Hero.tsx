@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import muneebProfile from "@/assets/muneeb-profile.jpg";
+import linkedinProfile from "@/assets/linkedin-profile.jpg";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -15,33 +15,33 @@ const Hero = () => {
 
   useEffect(() => {
     const img = new Image();
-    img.src = muneebProfile;
+    img.src = linkedinProfile;
     img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-primary-dark">
       {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern opacity-50" />
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary-light/50 via-transparent to-teal-light/30" />
+      <div className="absolute inset-0 hero-pattern opacity-20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-dark/95 to-primary/30" />
       
       {/* Animated Background Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-float animation-delay-2000" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal/5 rounded-full blur-3xl animate-float animation-delay-2000" />
       
       <div className="container mx-auto px-4 pt-20 pb-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 animate-fade-up">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                 Hello, I'm
                 <span className="block gradient-text mt-2">Muneeb Musharaf</span>
               </h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-primary-light">
+              <h2 className="text-xl md:text-2xl font-semibold text-secondary-light">
                 Final-Year BSc Computer Science & Mathematics @ QMUL
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-secondary-light/80">
                 ML/AI enthusiast | Research Ready (Google DeepMind) | Full-stack & Data
               </p>
             </div>
@@ -118,7 +118,7 @@ const Hero = () => {
                 <div className="relative w-full h-full rounded-full border-4 border-accent/20 overflow-hidden bg-gradient-to-br from-secondary to-secondary-light">
                   {imageLoaded ? (
                     <img
-                      src={muneebProfile}
+                      src={linkedinProfile}
                       alt="Muneeb Musharaf"
                       className="w-full h-full object-cover"
                     />
