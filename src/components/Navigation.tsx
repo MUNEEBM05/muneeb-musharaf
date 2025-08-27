@@ -34,16 +34,19 @@ const Navigation = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        isScrolled || location.pathname !== "/"
           ? "bg-background/95 backdrop-blur-lg shadow-lg border-b border-border"
-          : "bg-transparent"
+          : "bg-primary-dark/80 backdrop-blur-lg"
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold gradient-text">
+            <span className={cn(
+              "text-xl font-bold gradient-text",
+              location.pathname === "/" && !isScrolled ? "text-white" : ""
+            )}>
               Muneeb Musharaf
             </span>
           </Link>
@@ -57,8 +60,10 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors link-hover",
                   isActive(item.href)
-                    ? "text-accent"
-                    : "text-white/90 hover:text-white"
+                    ? location.pathname === "/" && !isScrolled ? "text-accent" : "text-primary"
+                    : location.pathname === "/" && !isScrolled 
+                      ? "text-white/90 hover:text-white"
+                      : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {item.label}
@@ -88,7 +93,8 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden",
+          "lg:hidden absolute top-full left-0 right-0 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden",
+          location.pathname === "/" ? "bg-primary-dark/95" : "bg-background/95",
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
         )}
       >
