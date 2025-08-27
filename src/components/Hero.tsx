@@ -140,7 +140,7 @@ const Hero = () => {
                   <img 
                     src={newLinkedinProfile}
                     alt="Muneeb Musharaf"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full opacity-20"
+                    className="absolute inset-0 w-full h-full object-cover rounded-full"
                   />
                   
                   {/* Text Overlay */}
