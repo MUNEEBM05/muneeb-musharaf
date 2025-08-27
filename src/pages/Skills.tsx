@@ -8,82 +8,37 @@ const Skills = () => {
       title: "Programming Languages",
       icon: Code2,
       color: "accent",
-      skills: [
-        { name: "Java", level: 90 },
-        { name: "Python", level: 88 },
-        { name: "JavaScript/TypeScript", level: 85 },
-        { name: "SQL", level: 82 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "R", level: 75 },
-        { name: "MATLAB", level: 78 },
-      ],
+      skills: ["Java", "Python", "JavaScript/TypeScript", "SQL", "HTML/CSS", "R", "MATLAB"],
     },
     {
       title: "Frameworks & Tools",
       icon: Palette,
       color: "teal",
-      skills: [
-        { name: "Django", level: 85 },
-        { name: "React", level: 87 },
-        { name: "Flask/FastAPI", level: 80 },
-        { name: "Git/GitHub", level: 90 },
-        { name: "Docker", level: 70 },
-        { name: "IntelliJ/VS Code", level: 92 },
-        { name: "Jupyter/Colab", level: 88 },
-      ],
+      skills: ["Django", "React", "Flask/FastAPI", "Git/GitHub", "Docker", "IntelliJ/VS Code", "Jupyter/Colab"],
     },
     {
       title: "ML & AI",
       icon: Brain,
       color: "primary",
-      skills: [
-        { name: "Data Preprocessing", level: 85 },
-        { name: "Feature Engineering", level: 82 },
-        { name: "Scikit-learn", level: 83 },
-        { name: "Pandas/NumPy", level: 88 },
-        { name: "Zero-shot Learning", level: 75 },
-        { name: "Model Evaluation", level: 80 },
-        { name: "Neural Networks", level: 78 },
-      ],
+      skills: ["Data Preprocessing", "Feature Engineering", "Scikit-learn", "Pandas/NumPy", "Zero-shot Learning", "Model Evaluation", "Neural Networks"],
     },
     {
       title: "Mathematics & Analytics",
       icon: ChartBar,
       color: "secondary",
-      skills: [
-        { name: "Linear Algebra", level: 90 },
-        { name: "Probability & Statistics", level: 88 },
-        { name: "Complex Variables", level: 85 },
-        { name: "Data Structures", level: 92 },
-        { name: "Algorithms", level: 90 },
-        { name: "Computational Statistics", level: 82 },
-      ],
+      skills: ["Linear Algebra", "Probability & Statistics", "Complex Variables", "Data Structures", "Algorithms", "Computational Statistics"],
     },
     {
       title: "Research Skills",
       icon: Database,
       color: "accent",
-      skills: [
-        { name: "Experimental Design", level: 85 },
-        { name: "Academic Writing", level: 83 },
-        { name: "Poster Presentation", level: 88 },
-        { name: "Literature Review", level: 86 },
-        { name: "Data Analysis", level: 90 },
-        { name: "Collaboration", level: 92 },
-      ],
+      skills: ["Experimental Design", "Academic Writing", "Poster Presentation", "Literature Review", "Data Analysis", "Collaboration"],
     },
     {
       title: "Soft Skills",
       icon: Users,
       color: "teal",
-      skills: [
-        { name: "Leadership", level: 88 },
-        { name: "Communication", level: 90 },
-        { name: "Project Management", level: 85 },
-        { name: "Problem Solving", level: 92 },
-        { name: "Teamwork", level: 90 },
-        { name: "Creativity", level: 87 },
-      ],
+      skills: ["Leadership", "Communication", "Project Management", "Problem Solving", "Teamwork", "Creativity"],
     },
   ];
 
@@ -123,27 +78,14 @@ const Skills = () => {
                 </div>
 
                 {/* Skills List */}
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, idx) => (
-                    <div key={idx} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                        <div
-                          className={`h-full bg-gradient-to-r from-${category.color} to-${category.color}/70 rounded-full transition-all duration-1000 ease-out`}
-                          style={{
-                            width: `${skill.level}%`,
-                            animation: `slide-in-right 1s ease-out ${idx * 100}ms`,
-                          }}
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={idx}
+                      className="px-3 py-1.5 bg-secondary/50 rounded-lg text-sm font-medium text-foreground hover:bg-secondary transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>
