@@ -57,8 +57,8 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors link-hover",
                   isActive(item.href)
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-accent"
+                    : "text-white/90 hover:text-white"
                 )}
               >
                 {item.label}
