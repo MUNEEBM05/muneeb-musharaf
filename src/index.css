@@ -8,35 +8,77 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Core Colors - Navy, Aqua, Sky Blue, Teal palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 222 71% 12%;
+    
+    /* Deep Navy - Primary brand color */
+    --primary: 222 100% 19%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 222 100% 12%;
+    --primary-light: 222 71% 28%;
+    
+    /* Light Aqua - Background accents */
+    --secondary: 184 42% 82%;
+    --secondary-foreground: 222 71% 12%;
+    --secondary-light: 184 42% 92%;
+    
+    /* Sky Blue - CTAs and interactive */
+    --accent: 199 100% 47%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 199 100% 40%;
+    
+    /* Teal - Badges and chips */
+    --teal: 184 57% 51%;
+    --teal-foreground: 0 0% 100%;
+    --teal-light: 184 57% 91%;
+    
+    /* UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 222 71% 12%;
+    --card-hover: 184 42% 98%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 222 71% 12%;
+    
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 14% 46%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 184 20% 90%;
+    --input: 184 20% 92%;
+    --ring: 199 100% 47%;
+    
+    /* Design Tokens */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--teal)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary-light)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card-hover)));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.15), 0 10px 10px -5px hsl(var(--primary) / 0.04);
+    --shadow-glow: 0 0 20px hsl(var(--accent) / 0.3);
+    --shadow-hover: 0 10px 30px -10px hsl(var(--primary) / 0.25);
+    
+    /* Animations */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Typography */
+    --font-sans: "Inter", "Manrope", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +142,92 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary/20;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+    transition: background 0.3s;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/40;
+  }
+}
+
+@layer components {
+  /* Hero section background pattern */
+  .hero-pattern {
+    background-image: 
+      linear-gradient(135deg, hsl(var(--primary) / 0.03) 25%, transparent 25%),
+      linear-gradient(225deg, hsl(var(--accent) / 0.03) 25%, transparent 25%),
+      linear-gradient(45deg, hsl(var(--primary) / 0.03) 25%, transparent 25%),
+      linear-gradient(315deg, hsl(var(--accent) / 0.03) 25%, transparent 25%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 0, 20px -20px, 0px 20px;
+  }
+  
+  /* Math grid pattern */
+  .math-grid {
+    background-image: var(--grid-pattern);
+    background-size: 30px 30px;
+  }
+  
+  /* Animated gradient text */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Animation delay utilities */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  /* Link underline animation */
+  .link-hover {
+    @apply relative;
+  }
+  
+  .link-hover::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 origin-right transition-transform duration-300;
+  }
+  
+  .link-hover:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+  
+  /* Card lift animation */
+  .card-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-hover;
+  }
+  
+  /* Badge animations */
+  .badge-glow {
+    @apply relative overflow-hidden;
+  }
+  
+  .badge-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
   }
 }
