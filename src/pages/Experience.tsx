@@ -133,17 +133,6 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Filter Tags */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in">
-          {["All", "AI/ML", "Full-stack", "Teaching", "Marketing", "Leadership"].map((tag) => (
-            <button
-              key={tag}
-              className="px-4 py-2 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 text-sm font-medium"
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
 
         {/* Experience Cards */}
         <div className="grid gap-6 max-w-5xl mx-auto">
