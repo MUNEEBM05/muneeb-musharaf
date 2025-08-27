@@ -143,21 +143,6 @@ const Hero = () => {
                     className="absolute inset-0 w-full h-full object-cover rounded-full opacity-20"
                   />
                   
-                  {/* Central Profile Image */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-accent/40 shadow-2xl">
-                        <img 
-                          src={newLinkedinProfile}
-                          alt="Muneeb Musharaf"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      {/* Glow effect around image */}
-                      <div className="absolute inset-0 rounded-full bg-accent/20 blur-xl -z-10" />
-                    </div>
-                  </div>
-                  
                   {/* Text Overlay */}
                   <div className="absolute bottom-8 text-center">
                     <p className="text-accent text-lg font-semibold">Let's</p>
