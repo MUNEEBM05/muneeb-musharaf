@@ -1,9 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ExternalLink, Github, Calendar } from "lucide-react";
+import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 const Projects = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  
   const projects = [
     {
       title: "Cryptocurrency Trading Platform",
@@ -12,36 +16,76 @@ const Projects = () => {
       tech: ["Django", "React", "PostgreSQL", "WebSockets", "REST API"],
       features: ["2FA Security", "Portfolio Tracking", "Real-time Alerts", "Trade History"],
       role: "Team Lead & Full-stack Developer",
-      color: "accent",
+      projectType: "University Group Project",
+      projectCategory: "Software Engineering",
+      githubLink: null,
+      highlights: [
+        "Led a team of 4 developers using Agile methodology",
+        "Implemented secure authentication with JWT and 2FA",
+        "Integrated real-time cryptocurrency data from multiple APIs",
+        "Achieved 95% test coverage with comprehensive unit and integration tests"
+      ],
+      icon: <Users className="h-5 w-5" />,
     },
     {
       title: "Virtual Mars: Gaussian Splatting",
       period: "Aug 2025 – Present",
-      description: "Final Year Project - Creating interactive 3D Martian landscapes using Gaussian Splatting",
+      description: "Creating interactive 3D Martian landscapes using Gaussian Splatting techniques",
       tech: ["Python", "3D Gaussian Splatting", "SfM", "Computer Vision"],
       features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration"],
       role: "Lead Researcher",
-      color: "teal",
+      projectType: "Final Year Project",
+      projectCategory: "Ongoing Research",
+      githubLink: null,
+      highlights: [
+        "Developing novel approach to 3D reconstruction of Martian terrain",
+        "Processing NASA Mars rover imagery for photogrammetry",
+        "Implementing Gaussian Splatting for real-time rendering",
+        "Creating interactive exploration interface for virtual Mars environment"
+      ],
+      icon: <School className="h-5 w-5" />,
     },
     {
       title: "Tetris Game",
       period: "Jun 2024 – Aug 2024",
-      description: "Classic Tetris implementation with modern features",
+      description: "Classic Tetris implementation with modern features and polished gameplay",
       tech: ["Java", "Javax", "Git"],
       features: ["Scoring System", "Line Clearing", "Difficulty Scaling", "Sound Effects"],
       role: "Solo Developer",
-      color: "primary",
+      projectType: "Private Project",
+      projectCategory: "Game Development",
+      githubLink: "https://github.com/MUNEEBM05/Tetris",
+      highlights: [
+        "Implemented classic Tetris mechanics with smooth controls",
+        "Added progressive difficulty scaling for challenging gameplay",
+        "Created custom sound effects and visual feedback",
+        "Optimized game loop for consistent 60 FPS performance"
+      ],
+      icon: <User className="h-5 w-5" />,
     },
     {
       title: "Horse Race Simulator",
       period: "Apr 2024",
-      description: "Interactive racing game with betting system",
+      description: "Interactive racing game with betting system and animated graphics",
       tech: ["Java", "Swing GUI"],
       features: ["Custom Horses", "Betting System", "Race Animation", "Login System"],
       role: "Solo Developer",
-      color: "secondary",
+      projectType: "University Project",
+      projectCategory: "Coursework",
+      githubLink: "https://github.com/MUNEEBM05/HorseRaceSimulator",
+      highlights: [
+        "Built complete GUI application using Java Swing",
+        "Implemented realistic race physics and animations",
+        "Created betting system with odds calculation",
+        "Added user authentication and profile management"
+      ],
+      icon: <School className="h-5 w-5" />,
     },
   ];
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,40 +99,114 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {/* Projects List */}
+        <div className="grid gap-6 max-w-5xl mx-auto">
           {projects.map((project, index) => (
-            <div key={index} className="bg-card rounded-2xl p-6 shadow-lg card-lift animate-fade-up">
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-bold text-primary">{project.title}</h3>
-                <span className="text-sm text-muted-foreground flex items-center gap-1">
-                  <Calendar className="h-3 w-3" />
-                  {project.period}
-                </span>
-              </div>
-              
-              <p className="text-muted-foreground mb-4">{project.description}</p>
-              
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-medium mb-2">Tech Stack:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-secondary text-xs rounded-full">
-                        {tech}
-                      </span>
-                    ))}
+            <div
+              key={index}
+              className="bg-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Project Header */}
+              <div className="p-6 bg-gradient-to-r from-primary/10 to-primary/5 border-b border-border">
+                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-primary/20 rounded-lg">
+                        {project.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-primary">
+                          {project.title}
+                        </h3>
+                        <p className="text-lg font-medium text-foreground mt-1">
+                          {project.role}
+                        </p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          {project.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>{project.period}</span>
+                    </div>
+                    <Badge variant="secondary" className="self-start">
+                      {project.projectType}
+                    </Badge>
+                    <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium self-start">
+                      {project.projectCategory}
+                    </span>
                   </div>
                 </div>
-                
-                <div className="flex gap-3">
-                  <Button variant="accent" size="sm">
-                    <Github className="mr-2 h-4 w-4" />
-                    View Code
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </Button>
+              </div>
+
+              {/* Project Content */}
+              <div className="p-6">
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-medium mb-2">Tech Stack:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, idx) => (
+                        <span key={idx} className="px-3 py-1 bg-secondary text-xs rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Expandable Highlights */}
+                  {expandedIndex === index && (
+                    <div className="animate-fade-up">
+                      <p className="text-sm font-medium mb-3">Key Highlights:</p>
+                      <ul className="space-y-2">
+                        {project.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span className="text-sm text-muted-foreground">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex gap-3">
+                      {project.githubLink && (
+                        <Button 
+                          variant="accent" 
+                          size="sm"
+                          onClick={() => window.open(project.githubLink, '_blank')}
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          View Code
+                        </Button>
+                      )}
+                    </div>
+                    
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => toggleExpand(index)}
+                      className="text-muted-foreground hover:text-primary"
+                    >
+                      {expandedIndex === index ? (
+                        <>
+                          <ChevronUp className="mr-2 h-4 w-4" />
+                          Show Less
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown className="mr-2 h-4 w-4" />
+                          Show More
+                        </>
+                      )}
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
