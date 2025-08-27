@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Colors - Navy, Aqua, Sky Blue, Teal palette */
-    --background: 0 0% 100%;
-    --foreground: 222 71% 12%;
+    /* Core Colors - Darker Navy Blue palette */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
     
-    /* Deep Navy - Primary brand color */
-    --primary: 222 100% 19%;
-    --primary-foreground: 0 0% 100%;
-    --primary-dark: 222 100% 12%;
-    --primary-light: 222 71% 28%;
+    /* Darker Navy - Primary brand color */
+    --primary: 222 84% 10%;
+    --primary-foreground: 210 40% 98%;
+    --primary-dark: 222 90% 6%;
+    --primary-light: 222 60% 18%;
     
-    /* Light Aqua - Background accents */
-    --secondary: 184 42% 82%;
-    --secondary-foreground: 222 71% 12%;
-    --secondary-light: 184 42% 92%;
+    /* Deep Blue - Background accents */
+    --secondary: 222 44% 16%;
+    --secondary-foreground: 210 40% 90%;
+    --secondary-light: 222 40% 22%;
     
-    /* Sky Blue - CTAs and interactive */
-    --accent: 199 100% 47%;
-    --accent-foreground: 0 0% 100%;
-    --accent-hover: 199 100% 40%;
+    /* Bright Cyan - CTAs and interactive */
+    --accent: 199 100% 50%;
+    --accent-foreground: 222 47% 11%;
+    --accent-hover: 199 100% 42%;
     
     /* Teal - Badges and chips */
-    --teal: 184 57% 51%;
+    --teal: 184 65% 48%;
     --teal-foreground: 0 0% 100%;
-    --teal-light: 184 57% 91%;
+    --teal-light: 184 50% 30%;
     
     /* UI Elements */
-    --card: 0 0% 100%;
-    --card-foreground: 222 71% 12%;
-    --card-hover: 184 42% 98%;
+    --card: 222 44% 12%;
+    --card-foreground: 210 40% 96%;
+    --card-hover: 222 44% 18%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 71% 12%;
+    --popover: 222 44% 12%;
+    --popover-foreground: 210 40% 96%;
     
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 14% 46%;
+    --muted: 222 30% 20%;
+    --muted-foreground: 210 20% 70%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 184 20% 90%;
-    --input: 184 20% 92%;
+    --border: 222 30% 24%;
+    --input: 222 30% 18%;
     --ring: 199 100% 47%;
     
     /* Design Tokens */
