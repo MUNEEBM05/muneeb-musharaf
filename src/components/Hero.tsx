@@ -29,14 +29,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-primary-dark">
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'hsl(222, 95%, 1%)' }}>
       {/* Minimal Background Effect */}
       <div className="absolute inset-0">
         {/* Very subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-dark via-primary to-primary-light opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/30" />
         
         {/* Single subtle glow orb */}
-        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-accent/[0.03] rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-accent/[0.02] rounded-full blur-3xl" />
       </div>
       
       {/* Interactive Glow - Ultra Subtle */}
