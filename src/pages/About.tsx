@@ -99,12 +99,6 @@ const About = () => {
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-teal rounded-full"></span>
-                  <span className="text-muted-foreground">
-                    Full-stack development with Django & React
-                  </span>
-                </li>
-                <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
                   <span className="text-muted-foreground">
                     3D Gaussian Splatting for Mars exploration (FYP)
