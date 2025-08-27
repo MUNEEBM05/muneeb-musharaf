@@ -100,7 +100,7 @@ const About = () => {
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full mt-1.5"></span>
+                  <span className="w-2 h-2 bg-accent rounded-full mt-1.5"></span>
                   <div className="text-muted-foreground">
                     <p className="font-medium mb-1">Final Year Project - Virtual Mars (Ongoing)</p>
                     <p className="text-sm">Developing 3D Gaussian Splatting techniques for Mars exploration using NASA's Curiosity and Perseverance rover imagery. Creating interactive 3D Martian landscapes for scientific research and public engagement.</p>
