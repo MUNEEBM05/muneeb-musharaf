@@ -134,11 +134,33 @@ const Hero = () => {
             <div className="relative">
               {/* Connect Circle */}
               <div className="relative">
-                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="text-accent text-xl font-semibold mb-2">Let's</p>
-                    <p className="text-white text-2xl font-bold">Connect</p>
-                    <div className="mt-4 w-16 h-0.5 bg-accent mx-auto" />
+                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden">
+                  {/* Profile Image Background */}
+                  <img 
+                    src={muneebProfile}
+                    alt="Muneeb Musharaf"
+                    className="absolute inset-0 w-full h-full object-cover rounded-full opacity-20"
+                  />
+                  
+                  {/* Central Profile Image */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="relative">
+                      <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-accent/40 shadow-2xl">
+                        <img 
+                          src={muneebProfile}
+                          alt="Muneeb Musharaf"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {/* Glow effect around image */}
+                      <div className="absolute inset-0 rounded-full bg-accent/20 blur-xl -z-10" />
+                    </div>
+                  </div>
+                  
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-8 text-center">
+                    <p className="text-accent text-lg font-semibold">Let's</p>
+                    <p className="text-white text-xl font-bold">Connect</p>
                   </div>
                 </div>
                 
