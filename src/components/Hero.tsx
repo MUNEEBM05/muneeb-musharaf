@@ -30,31 +30,31 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
-      {/* Aurora Background Effect */}
+      {/* Subtle Aurora Background Effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-accent/5 to-transparent animate-aurora" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal/5 to-transparent animate-aurora-reverse" />
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-accent/[0.02] to-transparent animate-aurora" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal/[0.02] to-transparent animate-aurora-reverse" />
       </div>
       
-      {/* Animated Gradient Orbs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-gradient-to-br from-accent/15 to-teal/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] bg-gradient-to-br from-teal/15 to-accent/10 rounded-full blur-3xl animate-float-delayed" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl animate-float-slow" />
+      {/* Subtle Gradient Orbs */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-gradient-to-br from-accent/[0.05] to-teal/[0.03] rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] bg-gradient-to-br from-teal/[0.05] to-accent/[0.03] rounded-full blur-3xl animate-float-delayed" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-br from-accent/[0.02] to-transparent rounded-full blur-3xl animate-float-slow" />
       
       {/* Subtle Particle Effect */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-1.5 h-1.5 bg-accent rounded-full animate-twinkle" />
-        <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-teal rounded-full animate-twinkle animation-delay-2000" />
-        <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-accent rounded-full animate-twinkle animation-delay-4000" />
-        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-teal rounded-full animate-twinkle" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-1/4 right-1/2 w-1.5 h-1.5 bg-secondary-light/40 rounded-full animate-twinkle" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/3 left-1/4 w-1 h-1 bg-accent/30 rounded-full animate-twinkle" />
+        <div className="absolute top-2/3 right-1/3 w-0.5 h-0.5 bg-teal/30 rounded-full animate-twinkle animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/2 w-1 h-1 bg-accent/30 rounded-full animate-twinkle animation-delay-4000" />
+        <div className="absolute top-1/2 right-1/4 w-0.5 h-0.5 bg-teal/30 rounded-full animate-twinkle" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-1/4 right-1/2 w-1 h-1 bg-secondary-light/20 rounded-full animate-twinkle" style={{ animationDelay: '1.5s' }} />
       </div>
       
-      {/* Interactive Glow */}
+      {/* Interactive Glow - Very Subtle */}
       <div 
-        className="absolute inset-0 opacity-30 transition-all duration-500"
+        className="absolute inset-0 opacity-20 transition-all duration-500"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, hsl(var(--accent) / 0.15) 0%, transparent 40%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, hsl(var(--accent) / 0.08) 0%, transparent 40%)`,
         }}
       />
       
