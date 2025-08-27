@@ -131,7 +131,7 @@ const Hero = () => {
           </div>
 
           {/* Minimalist Graphic Section */}
-          <div className="relative flex justify-center -mt-8 md:-mt-12">
+          <div className="relative flex justify-center -mt-24 md:-mt-32 lg:-mt-40">
             <div className="relative">
               {/* Main Container */}
               <div className="relative">
