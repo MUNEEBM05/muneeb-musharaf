@@ -135,37 +135,62 @@ const Hero = () => {
             <div className="relative">
               {/* Connect Circle */}
               <div className="relative">
-                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden">
-                  {/* Profile Image Background */}
+                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden group">
+                  {/* Animated gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent animate-pulse" />
+                  
+                  {/* Profile Image */}
                   <img 
                     src={newLinkedinProfile}
                     alt="Muneeb Musharaf"
                     className="absolute inset-0 w-full h-full object-cover rounded-full"
                   />
                   
+                  {/* Overlay gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-full" />
+                  
                   {/* Text Overlay */}
-                  <div className="absolute bottom-8 text-center">
+                  <div className="absolute bottom-8 text-center z-10">
                     <p className="text-accent text-lg font-semibold">Let's</p>
                     <p className="text-white text-xl font-bold">Connect</p>
                   </div>
                 </div>
                 
-                {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border border-accent/10 rounded-full" />
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-accent/10 rounded-full" />
+                {/* Animated Decorative Rings */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 border border-accent/10 rounded-full animate-pulse" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-accent/10 rounded-full animate-pulse delay-75" />
                 
-                {/* Code snippets decoration */}
+                {/* Additional rotating ring */}
+                <div className="absolute inset-0 w-full h-full">
+                  <div className="w-full h-full rounded-full border-2 border-dashed border-accent/20 animate-spin-slow" />
+                </div>
+                
+                {/* Floating tech icons/dots */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                  <div className="w-3 h-3 bg-accent rounded-full animate-bounce" />
+                </div>
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
+                  <div className="w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-100" />
+                </div>
+                <div className="absolute top-1/2 -left-8 -translate-y-1/2">
+                  <div className="w-3 h-3 bg-accent/40 rounded-full animate-bounce delay-200" />
+                </div>
+                <div className="absolute top-1/2 -right-8 -translate-y-1/2">
+                  <div className="w-3 h-3 bg-accent/80 rounded-full animate-bounce delay-300" />
+                </div>
+                
+                {/* Code snippets decoration with glowing effect */}
                 <div className="absolute top-10 -left-20 text-accent/40 font-mono text-xs">
-                  <div>&lt;code&gt;</div>
-                  <div className="ml-4">innovation</div>
-                  <div>&lt;/code&gt;</div>
+                  <div className="hover:text-accent transition-colors">&lt;code&gt;</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">innovation</div>
+                  <div className="hover:text-accent transition-colors">&lt;/code&gt;</div>
                 </div>
                 
                 <div className="absolute bottom-10 -right-20 text-accent/40 font-mono text-xs">
-                  <div>const skills = [</div>
-                  <div className="ml-4">"ML", "AI",</div>
-                  <div className="ml-4">"Full-Stack"</div>
-                  <div>];</div>
+                  <div className="hover:text-accent transition-colors">const skills = [</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">"ML", "AI",</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">"Full-Stack"</div>
+                  <div className="hover:text-accent transition-colors">];</div>
                 </div>
               </div>
             </div>
