@@ -4,6 +4,7 @@ import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Sparkles, Code2, Brain
 import { Link } from "react-router-dom";
 import linkedinProfile from "@/assets/linkedin-profile.jpg";
 import muneebProfile from "@/assets/muneeb-profile.jpg";
+import newProfile from "@/assets/new-profile.jpg";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -137,7 +138,7 @@ const Hero = () => {
                 <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden">
                   {/* Profile Image Background */}
                   <img 
-                    src={muneebProfile}
+                    src={newProfile}
                     alt="Muneeb Musharaf"
                     className="absolute inset-0 w-full h-full object-cover rounded-full opacity-20"
                   />
@@ -147,7 +148,7 @@ const Hero = () => {
                     <div className="relative">
                       <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-accent/40 shadow-2xl">
                         <img 
-                          src={muneebProfile}
+                          src={newProfile}
                           alt="Muneeb Musharaf"
                           className="w-full h-full object-cover"
                         />
