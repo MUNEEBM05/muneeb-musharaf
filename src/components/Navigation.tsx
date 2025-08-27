@@ -30,6 +30,13 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    if (location.pathname === href) {
+      e.preventDefault();
+      window.location.reload();
+    }
+  };
+
   return (
     <nav
       className={cn(
@@ -42,7 +49,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link 
+            to="/" 
+            onClick={(e) => handleNavClick(e, "/")}
+            className="flex items-center space-x-2"
+          >
             <span className={cn(
               "text-xl font-bold gradient-text",
               location.pathname === "/" && !isScrolled ? "text-white" : ""
@@ -57,6 +68,7 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 to={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className={cn(
                   "text-sm font-medium transition-colors link-hover",
                   isActive(item.href)
@@ -104,7 +116,10 @@ const Navigation = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
                 className={cn(
                   "text-sm font-medium py-2 px-4 rounded-lg transition-colors",
                   isActive(item.href)
