@@ -20,7 +20,7 @@ const About = () => {
           <h1 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             About Me
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto whitespace-nowrap">
             Passionate about AI/ML with a strong foundation in Computer Science and Mathematics
           </p>
         </div>
