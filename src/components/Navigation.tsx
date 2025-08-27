@@ -41,9 +41,8 @@ const Navigation = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled || location.pathname !== "/"
-          ? "bg-background/95 backdrop-blur-lg shadow-lg border-b border-border"
-          : "bg-primary-dark/80 backdrop-blur-lg"
+        "bg-primary-dark/80 backdrop-blur-lg",
+        isScrolled && "shadow-lg border-b border-border/20"
       )}
     >
       <div className="container mx-auto px-4">
@@ -54,10 +53,7 @@ const Navigation = () => {
             onClick={(e) => handleNavClick(e, "/")}
             className="flex items-center space-x-2"
           >
-            <span className={cn(
-              "text-xl font-bold gradient-text",
-              location.pathname === "/" && !isScrolled ? "text-white" : ""
-            )}>
+            <span className="text-xl font-bold text-white">
               Muneeb Musharaf
             </span>
           </Link>
@@ -72,10 +68,8 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors link-hover",
                   isActive(item.href)
-                    ? location.pathname === "/" && !isScrolled ? "text-accent" : "text-accent"
-                    : location.pathname === "/" && !isScrolled 
-                      ? "text-white/90 hover:text-white"
-                      : "text-foreground/70 hover:text-foreground"
+                    ? "text-accent"
+                    : "text-white/90 hover:text-white"
                 )}
               >
                 {item.label}
@@ -105,8 +99,8 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "lg:hidden absolute top-full left-0 right-0 backdrop-blur-lg border-b border-border transition-all duration-300 overflow-hidden",
-          location.pathname === "/" ? "bg-primary-dark/95" : "bg-background/95",
+          "lg:hidden absolute top-full left-0 right-0 backdrop-blur-lg border-b border-border/20 transition-all duration-300 overflow-hidden",
+          "bg-primary-dark/95",
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
         )}
       >
