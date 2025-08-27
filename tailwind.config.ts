@@ -151,6 +151,14 @@ export default {
 				'shimmer': {
 					'0%': { backgroundPosition: '-200% 0' },
 					'100%': { backgroundPosition: '200% 0' }
+				},
+				'gradient': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'spin': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -164,7 +172,9 @@ export default {
 				'bounce-subtle': 'bounce-subtle 2s infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'gradient': 'gradient 8s ease infinite',
+				'spin-slow': 'spin 20s linear infinite'
 			}
 		}
 	},

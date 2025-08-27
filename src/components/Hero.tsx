@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, ChevronDown, Sparkles, Code2, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 import linkedinProfile from "@/assets/linkedin-profile.jpg";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const stats = [
-    { label: "First-Class Average", highlight: true },
-    { label: "AI & ML", highlight: false },
-    { label: "Full-stack (Django + React)", highlight: false },
+    { label: "First-Class Average", highlight: true, icon: Sparkles },
+    { label: "AI & ML Research", highlight: false, icon: Brain },
+    { label: "Full-stack Development", highlight: false, icon: Code2 },
   ];
 
   useEffect(() => {
@@ -19,24 +20,55 @@ const Hero = () => {
     img.onload = () => setImageLoaded(true);
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-primary-dark">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 hero-pattern opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-dark/95 to-primary/30" />
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-primary">
+      {/* Interactive Background */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, var(--accent) 0%, transparent 50%)`,
+        }}
+      />
       
-      {/* Animated Background Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal/5 rounded-full blur-3xl animate-float animation-delay-2000" />
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]" />
+      </div>
+      
+      {/* Floating Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-float animation-delay-2000" />
+      <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-secondary-light/5 rounded-full blur-3xl animate-float animation-delay-4000" />
       
       <div className="container mx-auto px-4 pt-20 pb-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 animate-fade-up">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+              <span className="text-sm text-secondary-light">Open to opportunities</span>
+            </div>
+
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
                 Hello, I'm
-                <span className="block gradient-text mt-2">Muneeb Musharaf</span>
+                <span className="block mt-2">
+                  <span className="bg-gradient-to-r from-accent via-teal to-secondary-light bg-clip-text text-transparent animate-gradient">
+                    Muneeb Musharaf
+                  </span>
+                </span>
               </h1>
               <h2 className="text-xl md:text-2xl font-semibold text-secondary-light">
                 Final-Year BSc Computer Science & Mathematics @ QMUL
@@ -46,34 +78,56 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Stats Chips */}
-            <div className="flex flex-wrap gap-3">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    "px-4 py-2 rounded-full text-sm font-medium animate-scale-in",
-                    stat.highlight
-                      ? "bg-gradient-accent text-white"
-                      : "bg-secondary text-secondary-foreground"
-                  )}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {stat.label}
-                </div>
-              ))}
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className={cn(
+                      "group relative p-4 rounded-xl backdrop-blur-sm border transition-all duration-300 hover:scale-105 animate-scale-in",
+                      stat.highlight
+                        ? "bg-gradient-to-br from-accent/20 to-accent/10 border-accent/30 hover:border-accent/50"
+                        : "bg-white/5 border-white/10 hover:border-white/20"
+                    )}
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <Icon className={cn(
+                      "h-4 w-4 mb-2",
+                      stat.highlight ? "text-accent" : "text-secondary-light"
+                    )} />
+                    <p className={cn(
+                      "text-sm font-medium",
+                      stat.highlight ? "text-white" : "text-secondary-light"
+                    )}>
+                      {stat.label}
+                    </p>
+                    {stat.highlight && (
+                      <div className="absolute inset-0 bg-accent/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Link to="/projects">
-                <Button variant="hero" size="lg" className="group">
-                  View Projects
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button variant="hero" size="lg" className="group relative overflow-hidden">
+                  <span className="relative z-10 flex items-center">
+                    View Projects
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent to-teal opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="outline" size="lg">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
+                >
                   Contact Me
                 </Button>
               </Link>
@@ -81,63 +135,69 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
-              <a
-                href="https://linkedin.com/in/muneebmusharaf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="https://github.com/MUNEEBM05"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:muneebmusharaf@outlook.com"
-                className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
-                aria-label="Email"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
+              {[
+                { href: "https://linkedin.com/in/muneebmusharaf", icon: Linkedin, label: "LinkedIn" },
+                { href: "https://github.com/MUNEEBM05", icon: Github, label: "GitHub" },
+                { href: "mailto:muneebmusharaf@outlook.com", icon: Mail, label: "Email" },
+              ].map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target={social.href.startsWith("mailto") ? undefined : "_blank"}
+                    rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+                    className="group relative p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1"
+                    aria-label={social.label}
+                  >
+                    <Icon className="h-5 w-5 text-white group-hover:text-accent transition-colors" />
+                    <div className="absolute inset-0 bg-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
           {/* Profile Image */}
           <div className="relative flex justify-center lg:justify-end animate-fade-in">
             <div className="relative">
-              {/* Image Container with Glow Effect */}
+              {/* Image Container with Modern Effects */}
               <div className="relative w-80 h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-gradient-accent rounded-full blur-2xl opacity-20 animate-glow-pulse" />
-                <div className="relative w-full h-full rounded-full border-4 border-accent/20 overflow-hidden bg-gradient-to-br from-secondary to-secondary-light">
+                {/* Glow Effects */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent via-teal to-secondary-light rounded-full blur-3xl opacity-30 animate-glow-pulse" />
+                
+                {/* Main Image Container */}
+                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/10 backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-teal/20" />
                   {imageLoaded ? (
                     <img
                       src={linkedinProfile}
                       alt="Muneeb Musharaf"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover relative z-10"
                     />
                   ) : (
-                    <div className="w-full h-full animate-pulse bg-secondary" />
+                    <div className="w-full h-full animate-pulse bg-white/5" />
                   )}
                 </div>
+                
+                {/* Decorative Ring */}
+                <div className="absolute inset-0 rounded-full border border-white/5 scale-110 animate-spin-slow" />
+                <div className="absolute inset-0 rounded-full border border-white/5 scale-125 animate-spin-slow animation-delay-2000" />
               </div>
               
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-teal/20 rounded-full blur-xl" />
+              {/* Floating Elements */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-full blur-2xl animate-float" />
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-teal/20 rounded-full blur-2xl animate-float animation-delay-2000" />
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-6 w-6 text-muted-foreground" />
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="flex flex-col items-center gap-2 text-white/50">
+            <span className="text-xs uppercase tracking-wider">Scroll to explore</span>
+            <ChevronDown className="h-5 w-5 animate-bounce" />
+          </div>
         </div>
       </div>
     </section>

@@ -200,6 +200,19 @@ All colors MUST be HSL.
     animation-delay: 2s;
   }
   
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 20s linear infinite;
+  }
+  
   /* Link underline animation */
   .link-hover {
     @apply relative;
