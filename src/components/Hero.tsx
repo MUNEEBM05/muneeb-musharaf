@@ -50,7 +50,7 @@ const Hero = () => {
       />
       
       <div className="container mx-auto px-4 pt-20 pb-10 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
           {/* Text Content */}
           <div className="space-y-8 animate-fade-up">
             <div className="space-y-6">
@@ -131,7 +131,7 @@ const Hero = () => {
           </div>
 
           {/* Minimalist Graphic Section */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center">
             <div className="relative">
               {/* Connect Circle */}
               <div className="relative">
