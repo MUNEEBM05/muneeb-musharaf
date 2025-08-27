@@ -133,68 +133,64 @@ const Hero = () => {
           {/* Minimalist Graphic Section */}
           <div className="relative flex justify-center">
             <div className="relative">
-              {/* Modern Card Design with Profile */}
-              <div className="relative group">
-                {/* Glassmorphic container */}
-                <div className="relative w-72 h-72 md:w-80 md:h-80 p-1 rounded-3xl bg-gradient-to-br from-accent/30 to-accent/10">
-                  <div className="w-full h-full rounded-3xl bg-background/10 backdrop-blur-sm border border-accent/20 overflow-hidden">
-                    {/* Tech grid background */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute inset-0" style={{
-                        backgroundImage: 'linear-gradient(hsl(var(--accent) / 0.3) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent) / 0.3) 1px, transparent 1px)',
-                        backgroundSize: '20px 20px'
-                      }} />
-                    </div>
-                    
-                    {/* Profile Image with overlay */}
-                    <div className="relative h-full">
-                      <img 
-                        src={newLinkedinProfile}
-                        alt="Muneeb Musharaf"
-                        className="w-full h-full object-cover"
-                      />
-                      
-                      {/* Bottom gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                      
-                      {/* Text Content */}
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <div className="space-y-2">
-                          <p className="text-accent text-sm font-semibold uppercase tracking-wider">Available for</p>
-                          <p className="text-white text-2xl font-bold">Collaboration</p>
-                          <div className="flex gap-2 mt-3">
-                            <span className="px-2 py-1 bg-accent/20 backdrop-blur-sm rounded-full text-xs text-accent border border-accent/30">ML/AI</span>
-                            <span className="px-2 py-1 bg-accent/20 backdrop-blur-sm rounded-full text-xs text-accent border border-accent/30">Full-Stack</span>
-                            <span className="px-2 py-1 bg-accent/20 backdrop-blur-sm rounded-full text-xs text-accent border border-accent/30">Research</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              {/* Connect Circle */}
+              <div className="relative">
+                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden group">
+                  {/* Animated gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent animate-pulse" />
+                  
+                  {/* Profile Image */}
+                  <img 
+                    src={newLinkedinProfile}
+                    alt="Muneeb Musharaf"
+                    className="absolute inset-0 w-full h-full object-cover rounded-full"
+                  />
+                  
+                  {/* Overlay gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-full" />
+                  
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-8 text-center z-10">
+                    <p className="text-accent text-lg font-semibold">Let's</p>
+                    <p className="text-white text-xl font-bold">Connect</p>
                   </div>
                 </div>
                 
-                {/* Corner accents */}
-                <div className="absolute -top-2 -left-2 w-8 h-8">
-                  <div className="absolute top-0 left-0 w-full h-[2px] bg-accent" />
-                  <div className="absolute top-0 left-0 h-full w-[2px] bg-accent" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8">
-                  <div className="absolute top-0 right-0 w-full h-[2px] bg-accent" />
-                  <div className="absolute top-0 right-0 h-full w-[2px] bg-accent" />
-                </div>
-                <div className="absolute -bottom-2 -left-2 w-8 h-8">
-                  <div className="absolute bottom-0 left-0 w-full h-[2px] bg-accent" />
-                  <div className="absolute bottom-0 left-0 h-full w-[2px] bg-accent" />
-                </div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8">
-                  <div className="absolute bottom-0 right-0 w-full h-[2px] bg-accent" />
-                  <div className="absolute bottom-0 right-0 h-full w-[2px] bg-accent" />
+                {/* Animated Decorative Rings */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 border border-accent/10 rounded-full animate-pulse" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-accent/10 rounded-full animate-pulse delay-75" />
+                
+                {/* Additional rotating ring */}
+                <div className="absolute inset-0 w-full h-full">
+                  <div className="w-full h-full rounded-full border-2 border-dashed border-accent/20 animate-spin-slow" />
                 </div>
                 
-                {/* Floating status indicator */}
-                <div className="absolute -top-3 right-8 flex items-center gap-2 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-accent/30">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-xs text-white font-medium">Open to opportunities</span>
+                {/* Floating tech icons/dots */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                  <div className="w-3 h-3 bg-accent rounded-full animate-bounce" />
+                </div>
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
+                  <div className="w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-100" />
+                </div>
+                <div className="absolute top-1/2 -left-8 -translate-y-1/2">
+                  <div className="w-3 h-3 bg-accent/40 rounded-full animate-bounce delay-200" />
+                </div>
+                <div className="absolute top-1/2 -right-8 -translate-y-1/2">
+                  <div className="w-3 h-3 bg-accent/80 rounded-full animate-bounce delay-300" />
+                </div>
+                
+                {/* Code snippets decoration with glowing effect */}
+                <div className="absolute top-10 -left-20 text-accent/40 font-mono text-xs">
+                  <div className="hover:text-accent transition-colors">&lt;code&gt;</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">innovation</div>
+                  <div className="hover:text-accent transition-colors">&lt;/code&gt;</div>
+                </div>
+                
+                <div className="absolute bottom-10 -right-20 text-accent/40 font-mono text-xs">
+                  <div className="hover:text-accent transition-colors">const skills = [</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">"ML", "AI",</div>
+                  <div className="ml-4 hover:text-accent/60 transition-colors">"Full-Stack"</div>
+                  <div className="hover:text-accent transition-colors">];</div>
                 </div>
               </div>
             </div>
