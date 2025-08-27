@@ -133,64 +133,66 @@ const Hero = () => {
           {/* Minimalist Graphic Section */}
           <div className="relative flex justify-center">
             <div className="relative">
-              {/* Connect Circle */}
+              {/* Main Container */}
               <div className="relative">
-                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full border-2 border-accent/20 flex items-center justify-center relative overflow-hidden group">
-                  {/* Animated gradient background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent animate-pulse" />
+                {/* Outer glow effect */}
+                <div className="absolute inset-0 w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent blur-2xl animate-pulse" />
+                
+                {/* Orbital rings */}
+                <div className="absolute inset-0 w-80 h-80 md:w-96 md:h-96">
+                  <div className="absolute inset-4 rounded-full border border-accent/10 animate-spin-slow" />
+                  <div className="absolute inset-8 rounded-full border border-accent/20 animate-spin-slow reverse" />
+                  <div className="absolute inset-12 rounded-full border border-accent/30" />
+                </div>
+                
+                {/* Profile Circle */}
+                <div className="w-72 h-72 md:w-80 md:h-80 rounded-full relative overflow-hidden group">
+                  {/* Gradient border effect */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-hover to-accent p-[2px]">
+                    <div className="w-full h-full rounded-full bg-background" />
+                  </div>
                   
                   {/* Profile Image */}
                   <img 
                     src={newLinkedinProfile}
                     alt="Muneeb Musharaf"
-                    className="absolute inset-0 w-full h-full object-cover rounded-full"
+                    className="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] object-cover rounded-full z-10"
                   />
                   
-                  {/* Overlay gradient for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-full" />
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-accent/40 via-transparent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                   
                   {/* Text Overlay */}
-                  <div className="absolute bottom-8 text-center z-10">
-                    <p className="text-accent text-lg font-semibold">Let's</p>
-                    <p className="text-white text-xl font-bold">Connect</p>
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center z-30">
+                    <p className="text-white/90 text-sm uppercase tracking-wider mb-1">Available for</p>
+                    <p className="text-accent text-xl font-bold">Opportunities</p>
                   </div>
                 </div>
                 
-                {/* Animated Decorative Rings */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border border-accent/10 rounded-full animate-pulse" />
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 border border-accent/10 rounded-full animate-pulse delay-75" />
-                
-                {/* Additional rotating ring */}
-                <div className="absolute inset-0 w-full h-full">
-                  <div className="w-full h-full rounded-full border-2 border-dashed border-accent/20 animate-spin-slow" />
+                {/* Geometric accent shapes */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-br from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                </div>
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-tr from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                </div>
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-bl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                </div>
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-tl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 
-                {/* Floating tech icons/dots */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-                  <div className="w-3 h-3 bg-accent rounded-full animate-bounce" />
+                {/* Tech stack badges */}
+                <div className="absolute -top-12 left-1/2 -translate-x-1/2">
+                  <div className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-accent text-xs font-mono">
+                    AI/ML Engineer
+                  </div>
                 </div>
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
-                  <div className="w-3 h-3 bg-accent/60 rounded-full animate-bounce delay-100" />
-                </div>
-                <div className="absolute top-1/2 -left-8 -translate-y-1/2">
-                  <div className="w-3 h-3 bg-accent/40 rounded-full animate-bounce delay-200" />
-                </div>
-                <div className="absolute top-1/2 -right-8 -translate-y-1/2">
-                  <div className="w-3 h-3 bg-accent/80 rounded-full animate-bounce delay-300" />
-                </div>
-                
-                {/* Code snippets decoration with glowing effect */}
-                <div className="absolute top-10 -left-20 text-accent/40 font-mono text-xs">
-                  <div className="hover:text-accent transition-colors">&lt;code&gt;</div>
-                  <div className="ml-4 hover:text-accent/60 transition-colors">innovation</div>
-                  <div className="hover:text-accent transition-colors">&lt;/code&gt;</div>
-                </div>
-                
-                <div className="absolute bottom-10 -right-20 text-accent/40 font-mono text-xs">
-                  <div className="hover:text-accent transition-colors">const skills = [</div>
-                  <div className="ml-4 hover:text-accent/60 transition-colors">"ML", "AI",</div>
-                  <div className="ml-4 hover:text-accent/60 transition-colors">"Full-Stack"</div>
-                  <div className="hover:text-accent transition-colors">];</div>
+                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+                  <div className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-accent text-xs font-mono">
+                    Full-Stack Developer
+                  </div>
                 </div>
               </div>
             </div>
