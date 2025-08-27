@@ -91,18 +91,20 @@ const About = () => {
             {/* Current Focus */}
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 animate-slide-in-right">
               <h3 className="text-xl font-bold text-primary mb-4">Current Focus</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-accent rounded-full"></span>
-                  <span className="text-muted-foreground">
-                    AI/ML Research with focus on music perception
-                  </span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-accent rounded-full mt-1.5"></span>
+                  <div className="text-muted-foreground">
+                    <p className="font-medium mb-1">AI/ML Research - Music Perception</p>
+                    <p className="text-sm">Investigating how AI models perceive musical timbre and emotion through zero-shot learning approaches with CLAP and MuQMulan embeddings. Currently writing a paper with PhD mentors from my Google DeepMind programme.</p>
+                  </div>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span className="text-muted-foreground">
-                    3D Gaussian Splatting for Mars exploration (FYP)
-                  </span>
+                <li className="flex items-start gap-2">
+                  <span className="w-2 h-2 bg-primary rounded-full mt-1.5"></span>
+                  <div className="text-muted-foreground">
+                    <p className="font-medium mb-1">Final Year Project - Virtual Mars (Ongoing)</p>
+                    <p className="text-sm">Developing 3D Gaussian Splatting techniques for Mars exploration using NASA's Curiosity and Perseverance rover imagery. Creating interactive 3D Martian landscapes for scientific research and public engagement.</p>
+                  </div>
                 </li>
               </ul>
             </div>
