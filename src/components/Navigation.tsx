@@ -72,10 +72,10 @@ const Navigation = () => {
                 className={cn(
                   "text-sm font-medium transition-colors link-hover",
                   isActive(item.href)
-                    ? location.pathname === "/" && !isScrolled ? "text-accent" : "text-primary"
+                    ? location.pathname === "/" && !isScrolled ? "text-accent" : "text-accent"
                     : location.pathname === "/" && !isScrolled 
                       ? "text-white/90 hover:text-white"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-foreground/70 hover:text-foreground"
                 )}
               >
                 {item.label}
