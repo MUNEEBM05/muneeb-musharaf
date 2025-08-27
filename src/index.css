@@ -8,48 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Core Colors - Deep Dark Navy with Cyan accents */
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
+    /* Core Colors - Light theme with blue accents */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
     
-    /* Ultra Dark Navy - Primary brand color */
-    --primary: 222 90% 4%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
     --primary-dark: 222 95% 2%;
-    --primary-light: 222 75% 8%;
+    --primary-light: 217 91% 95%;
     
-    /* Dark Blue-Gray - Background accents */
-    --secondary: 222 50% 11%;
-    --secondary-foreground: 210 40% 95%;
-    --secondary-light: 222 45% 16%;
+    /* Secondary - Light blue backgrounds */
+    --secondary: 214 95% 93%;
+    --secondary-foreground: 222 84% 5%;
+    --secondary-light: 214 95% 97%;
     
     /* Cyan - CTAs and interactive */
     --accent: 185 100% 50%;
-    --accent-foreground: 222 84% 5%;
+    --accent-foreground: 0 0% 100%;
     --accent-hover: 185 100% 45%;
     
     /* Teal - Badges and chips */
     --teal: 175 70% 45%;
-    --teal-foreground: 222 84% 5%;
+    --teal-foreground: 0 0% 100%;
     --teal-light: 175 60% 35%;
     
     /* UI Elements */
-    --card: 222 44% 12%;
-    --card-foreground: 210 40% 96%;
-    --card-hover: 222 44% 18%;
+    --card: 214 95% 98%;
+    --card-foreground: 222 84% 5%;
+    --card-hover: 214 95% 96%;
     
-    --popover: 222 44% 12%;
-    --popover-foreground: 210 40% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
     
-    --muted: 222 30% 20%;
-    --muted-foreground: 210 20% 70%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 222 30% 24%;
-    --input: 222 30% 18%;
-    --ring: 199 100% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
     
     /* Design Tokens */
     --radius: 0.75rem;
