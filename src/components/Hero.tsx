@@ -29,24 +29,34 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-dark to-primary">
-      {/* Interactive Background */}
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, var(--accent) 0%, transparent 50%)`,
-        }}
-      />
-      
-      {/* Animated Grid Pattern */}
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary-dark">
+      {/* Aurora Background Effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_24px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-transparent via-accent/5 to-transparent animate-aurora" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal/5 to-transparent animate-aurora-reverse" />
       </div>
       
-      {/* Floating Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal/10 rounded-full blur-3xl animate-float animation-delay-2000" />
-      <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-secondary-light/5 rounded-full blur-3xl animate-float animation-delay-4000" />
+      {/* Animated Gradient Orbs */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-gradient-to-br from-accent/15 to-teal/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] bg-gradient-to-br from-teal/15 to-accent/10 rounded-full blur-3xl animate-float-delayed" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl animate-float-slow" />
+      
+      {/* Subtle Particle Effect */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 left-1/4 w-1.5 h-1.5 bg-accent rounded-full animate-twinkle" />
+        <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-teal rounded-full animate-twinkle animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-accent rounded-full animate-twinkle animation-delay-4000" />
+        <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-teal rounded-full animate-twinkle" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-1/4 right-1/2 w-1.5 h-1.5 bg-secondary-light/40 rounded-full animate-twinkle" style={{ animationDelay: '1.5s' }} />
+      </div>
+      
+      {/* Interactive Glow */}
+      <div 
+        className="absolute inset-0 opacity-30 transition-all duration-500"
+        style={{
+          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, hsl(var(--accent) / 0.15) 0%, transparent 40%)`,
+        }}
+      />
       
       <div className="container mx-auto px-4 pt-20 pb-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
