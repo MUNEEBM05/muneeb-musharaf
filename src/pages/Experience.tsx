@@ -19,8 +19,14 @@ import microsoftLogo from "@/assets/logos/microsoft-logo.png";
 import stemsmartLogo from "@/assets/logos/stemsmart-logo.png";
 
 // Import certificates
+import deepmindRRPCertificate from "@/assets/certificates/deepmind-rrp-certificate.jpg";
 import microsoftCareerJourney from "@/assets/certificates/microsoft-career-journey.png";
 import microsoftInterviewSkills from "@/assets/certificates/microsoft-interview-skills.png";
+import microsoftCareerSkills from "@/assets/certificates/microsoft-career-skills.jpg";
+import microsoftInterviewSkillsNew from "@/assets/certificates/microsoft-interview-skills-new.jpg";
+import microsoftCompletion from "@/assets/certificates/microsoft-completion.png";
+import stemsmartPhase1 from "@/assets/certificates/stemsmart-phase1.png";
+import stemsmartPhase2 from "@/assets/certificates/stemsmart-phase2.png";
 
 // Types
 interface Certificate {
@@ -63,6 +69,15 @@ const Experience = () => {
       ],
       logo: deepmindLogo,
       logoBg: "bg-sky-100 dark:bg-sky-950",
+      certificates: [
+        {
+          name: "Research Ready Programme Certificate",
+          image: deepmindRRPCertificate,
+          issuer: "Google DeepMind",
+          date: "2025",
+          type: "certificate" as const,
+        },
+      ],
     },
     {
       company: "Data Annotation",
@@ -163,6 +178,27 @@ const Experience = () => {
           date: "2024",
           type: "badge" as const,
         },
+        {
+          name: "Career Skills",
+          image: microsoftCareerSkills,
+          issuer: "Microsoft EMBRACE",
+          date: "2024",
+          type: "badge" as const,
+        },
+        {
+          name: "Interview Skills Certificate",
+          image: microsoftInterviewSkillsNew,
+          issuer: "Microsoft EMBRACE",
+          date: "2024",
+          type: "certificate" as const,
+        },
+        {
+          name: "Programme Completion",
+          image: microsoftCompletion,
+          issuer: "Microsoft EMBRACE",
+          date: "2024",
+          type: "certificate" as const,
+        },
       ],
     },
     {
@@ -181,6 +217,22 @@ const Experience = () => {
       ],
       logo: stemsmartLogo,
       logoBg: "bg-green-50 dark:bg-green-950",
+      certificates: [
+        {
+          name: "Phase 1 Certificate",
+          image: stemsmartPhase1,
+          issuer: "STEMSMART Programme",
+          date: "2022",
+          type: "certificate" as const,
+        },
+        {
+          name: "Phase 2 Certificate",
+          image: stemsmartPhase2,
+          issuer: "STEMSMART Programme",
+          date: "2023",
+          type: "certificate" as const,
+        },
+      ],
     },
   ];
 
