@@ -88,7 +88,7 @@ const Education = () => {
                 {/* Timeline Dot */}
                 <div className="relative z-10">
                   <div
-                    className={`w-16 h-16 rounded-full bg-${item.color} flex items-center justify-center shadow-glow`}
+                    className="w-16 h-16 rounded-full bg-blue-950 flex items-center justify-center shadow-glow"
                   >
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
