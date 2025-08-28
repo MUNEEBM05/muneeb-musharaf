@@ -54,7 +54,7 @@ const Navigation = () => {
             onClick={(e) => handleNavClick(e, "/")}
             className="flex items-center space-x-2"
           >
-            <span className="text-xl font-bold text-white">
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-white bg-clip-text text-transparent">
               Muneeb Musharaf
             </span>
           </Link>
