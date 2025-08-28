@@ -161,12 +161,6 @@ const Hero = () => {
                   
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/40 via-transparent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
-                  
-                  {/* Text Overlay */}
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center z-30">
-                    <p className="text-white/90 text-sm uppercase tracking-wider mb-1">Available for</p>
-                    <p className="text-accent text-xl font-bold">Opportunities</p>
-                  </div>
                 </div>
                 
                 {/* Geometric accent shapes */}
