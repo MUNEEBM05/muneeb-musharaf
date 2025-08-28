@@ -290,15 +290,15 @@ const Experience = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm">
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
                       <Calendar className="h-4 w-4 text-muted-foreground" />
                       <span className="text-muted-foreground">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
                       <MapPin className="h-4 w-4 text-muted-foreground" />
                       <span className="text-muted-foreground">{exp.location}</span>
                     </div>
-                    <span className="px-3 py-1 bg-gradient-to-r from-accent/20 to-teal/20 rounded-full text-xs font-medium self-start text-accent">
+                    <span className="px-3 py-1 bg-secondary/50 rounded-full text-xs font-medium self-start text-foreground">
                       {exp.type}
                     </span>
                   </div>

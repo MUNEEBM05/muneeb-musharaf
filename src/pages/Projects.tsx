@@ -130,7 +130,7 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
                       <Calendar className="h-4 w-4" />
                       <span>{project.period}</span>
                     </div>
