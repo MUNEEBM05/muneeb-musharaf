@@ -1,7 +1,13 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { Calendar, MapPin, ChevronDown, ChevronUp, Award, Download } from "lucide-react";
 import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 // Import company logos
 import deepmindLogo from "@/assets/logos/deepmind-logo.png";
@@ -12,10 +18,35 @@ import qmConsultingLogo from "@/assets/logos/qm-consulting-logo.png";
 import microsoftLogo from "@/assets/logos/microsoft-logo.png";
 import stemsmartLogo from "@/assets/logos/stemsmart-logo.png";
 
+// Import certificates
+import microsoftCareerJourney from "@/assets/certificates/microsoft-career-journey.png";
+import microsoftInterviewSkills from "@/assets/certificates/microsoft-interview-skills.png";
+
+// Types
+interface Certificate {
+  name: string;
+  image: string;
+  issuer?: string;
+  date?: string;
+  type?: "certificate" | "badge";
+}
+
 const Experience = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
 
-  const experiences = [
+  const experiences: Array<{
+    company: string;
+    role: string;
+    period: string;
+    location: string;
+    type: string;
+    description: string;
+    highlights: string[];
+    logo: string;
+    logoBg: string;
+    certificates?: Certificate[];
+  }> = [
     {
       company: "Google DeepMind",
       role: "Research Ready Programme - Intern",
@@ -117,6 +148,22 @@ const Experience = () => {
       ],
       logo: microsoftLogo,
       logoBg: "bg-blue-500 dark:bg-blue-600",
+      certificates: [
+        {
+          name: "Career Journey",
+          image: microsoftCareerJourney,
+          issuer: "Microsoft EMBRACE",
+          date: "2024",
+          type: "badge" as const,
+        },
+        {
+          name: "Interview Skills",
+          image: microsoftInterviewSkills,
+          issuer: "Microsoft EMBRACE",
+          date: "2024",
+          type: "badge" as const,
+        },
+      ],
     },
     {
       company: "STEMSMART Programme",
@@ -139,6 +186,15 @@ const Experience = () => {
 
   const toggleExpand = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
+  };
+
+  const handleDownload = (imagePath: string, name: string) => {
+    const link = document.createElement('a');
+    link.href = imagePath;
+    link.download = `${name.replace(/\s+/g, '-').toLowerCase()}.png`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -174,9 +230,19 @@ const Experience = () => {
                         <img src={`${exp.logo}?v=7`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain p-3" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
-                          {exp.company}
-                        </h3>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
+                            {exp.company}
+                          </h3>
+                          {exp.certificates && exp.certificates.length > 0 && (
+                            <div className="flex items-center gap-1 px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 rounded-full">
+                              <Award className="h-3 w-3 text-amber-600 dark:text-amber-400" />
+                              <span className="text-xs font-medium text-amber-700 dark:text-amber-300">
+                                {exp.certificates.length}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         <p className="text-lg font-medium text-foreground mt-1">
                           {exp.role}
                         </p>
@@ -205,7 +271,7 @@ const Experience = () => {
 
               {/* Expandable Content */}
               <div className={`overflow-hidden transition-all duration-300 ${
-                expandedCard === index ? "max-h-96" : "max-h-0"
+                expandedCard === index ? "max-h-[600px]" : "max-h-0"
               }`}>
                 <div className="p-6">
                   <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
@@ -217,6 +283,42 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
+
+                  {exp.certificates && exp.certificates.length > 0 && (
+                    <div className="mt-6">
+                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Award className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+                        Certificates & Badges
+                      </h4>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {exp.certificates.map((cert, certIdx) => (
+                          <div
+                            key={certIdx}
+                            className="group relative cursor-pointer transform transition-all duration-200 hover:scale-105"
+                            onClick={() => setSelectedCertificate(cert)}
+                          >
+                            <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-lg p-2 border border-amber-200 dark:border-amber-700 hover:border-amber-300 dark:hover:border-amber-600">
+                              <div className="aspect-square relative overflow-hidden rounded-md bg-white dark:bg-gray-900">
+                                <img
+                                  src={cert.image}
+                                  alt={cert.name}
+                                  className="w-full h-full object-contain p-2"
+                                />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                  <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 dark:bg-gray-900/90 rounded-full p-2">
+                                    <Award className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                                  </div>
+                                </div>
+                              </div>
+                              <p className="text-xs font-medium text-center mt-2 text-gray-700 dark:text-gray-300">
+                                {cert.name}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -239,6 +341,59 @@ const Experience = () => {
           ))}
         </div>
       </main>
+
+      {/* Certificate Modal */}
+      <Dialog open={!!selectedCertificate} onOpenChange={() => setSelectedCertificate(null)}>
+        <DialogContent className="max-w-3xl">
+          <DialogHeader>
+            <DialogTitle className="flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <Award className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                {selectedCertificate?.name}
+              </span>
+              <button
+                onClick={() => selectedCertificate && handleDownload(selectedCertificate.image, selectedCertificate.name)}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                title="Download"
+              >
+                <Download className="h-4 w-4" />
+              </button>
+            </DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            {selectedCertificate && (
+              <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/10 dark:to-amber-800/10 rounded-lg p-4">
+                <img
+                  src={selectedCertificate.image}
+                  alt={selectedCertificate.name}
+                  className="w-full h-auto rounded-lg"
+                />
+                <div className="mt-4 flex justify-between items-center text-sm">
+                  <div>
+                    {selectedCertificate.issuer && (
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Issued by: <span className="font-medium text-gray-800 dark:text-gray-200">{selectedCertificate.issuer}</span>
+                      </p>
+                    )}
+                    {selectedCertificate.date && (
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Date: <span className="font-medium text-gray-800 dark:text-gray-200">{selectedCertificate.date}</span>
+                      </p>
+                    )}
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    selectedCertificate.type === 'badge' 
+                      ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300'
+                      : 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
+                  }`}>
+                    {selectedCertificate.type === 'badge' ? 'Digital Badge' : 'Certificate'}
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <Footer />
     </div>
