@@ -30,6 +30,7 @@ const Experience = () => {
         "Presented research poster and co-authoring paper with PhD mentors",
       ],
       logo: deepmindLogo,
+      logoBg: "bg-sky-100 dark:bg-sky-950",
     },
     {
       company: "Data Annotation",
@@ -45,6 +46,7 @@ const Experience = () => {
         "Gaining insights into model behavior and training processes",
       ],
       logo: dataAnnotationLogo,
+      logoBg: "bg-black dark:bg-black",
     },
     {
       company: "London Science College",
@@ -60,6 +62,7 @@ const Experience = () => {
         "Mentoring students for exam preparation and university applications",
       ],
       logo: londonScienceLogo,
+      logoBg: "bg-blue-50 dark:bg-blue-950",
     },
     {
       company: "My Travel World",
@@ -75,6 +78,7 @@ const Experience = () => {
         "Cross-team collaboration for brand consistency",
       ],
       logo: travelWorldLogo,
+      logoBg: "bg-teal-50 dark:bg-teal-950",
     },
     {
       company: "Queen Mary Ihsan Consulting Society",
@@ -90,6 +94,7 @@ const Experience = () => {
         "Mentoring junior members and facilitating workshops",
       ],
       logo: qmConsultingLogo,
+      logoBg: "bg-purple-50 dark:bg-purple-950",
     },
     {
       company: "Microsoft",
@@ -105,6 +110,7 @@ const Experience = () => {
         "Rapid upskilling in cloud technologies and best practices",
       ],
       logo: microsoftLogo,
+      logoBg: "bg-blue-500 dark:bg-blue-600",
     },
     {
       company: "STEMSMART Programme",
@@ -120,6 +126,7 @@ const Experience = () => {
         "Enhanced problem-solving and critical thinking abilities",
       ],
       logo: stemsmartLogo,
+      logoBg: "bg-green-50 dark:bg-green-950",
     },
   ];
 
@@ -156,8 +163,8 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-4">
-                      <div className="w-28 h-28 rounded-lg overflow-hidden bg-gradient-to-br from-background/50 to-background/80 backdrop-blur-sm border border-border/30 flex items-center justify-center flex-shrink-0">
-                        <img src={`${exp.logo}?v=6`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain p-3" />
+                      <div className={`w-28 h-28 rounded-lg overflow-hidden ${exp.logoBg} flex items-center justify-center flex-shrink-0`}>
+                        <img src={`${exp.logo}?v=7`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain p-3" />
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
