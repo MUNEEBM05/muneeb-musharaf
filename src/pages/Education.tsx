@@ -177,7 +177,7 @@ const Education = () => {
         </div>
 
         {/* Achievements Summary */}
-        <div className="mt-16 bg-blue-950 rounded-2xl p-8 text-center animate-scale-in">
+        <div className="mt-16 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 text-center animate-scale-in">
           <h3 className="text-2xl font-bold text-primary mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
