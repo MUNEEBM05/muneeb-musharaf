@@ -166,14 +166,14 @@ const Experience = () => {
                     </div>
                   </div>
                   
-                  <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>{exp.period}</span>
+                  <div className="flex flex-col gap-2 text-sm">
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1 rounded-full">
+                      <Calendar className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-muted-foreground">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" />
-                      <span>{exp.location}</span>
+                    <div className="flex items-center gap-2 bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1 rounded-full">
+                      <MapPin className="h-4 w-4 text-muted-foreground" />
+                      <span className="text-muted-foreground">{exp.location}</span>
                     </div>
                     <span className={`px-3 py-1 bg-${exp.color}/20 text-${exp.color} rounded-full text-xs font-medium self-start`}>
                       {exp.type}
