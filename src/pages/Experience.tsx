@@ -139,7 +139,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Card Header */}

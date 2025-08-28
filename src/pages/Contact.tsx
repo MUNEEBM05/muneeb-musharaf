@@ -18,26 +18,26 @@ const Contact = () => {
           <div className="space-y-6">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">Get in Touch</h2>
             <div className="space-y-4">
-              <a href="mailto:muneebmusharaf@outlook.com" className="flex items-center gap-3 p-4 bg-card rounded-xl hover:bg-accent/10 transition-colors">
+              <a href="mailto:muneebmusharaf@outlook.com" className="flex items-center gap-3 p-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-xl hover:bg-accent/10 transition-colors">
                 <Mail className="h-5 w-5 text-accent" />
                 <span>muneebmusharaf@outlook.com</span>
               </a>
-              <a href="https://linkedin.com/in/muneebmusharaf" className="flex items-center gap-3 p-4 bg-card rounded-xl hover:bg-accent/10 transition-colors">
+              <a href="https://linkedin.com/in/muneebmusharaf" className="flex items-center gap-3 p-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-xl hover:bg-accent/10 transition-colors">
                 <Linkedin className="h-5 w-5 text-accent" />
                 <span>/in/muneebmusharaf</span>
               </a>
-              <a href="https://github.com/MUNEEBM05" className="flex items-center gap-3 p-4 bg-card rounded-xl hover:bg-accent/10 transition-colors">
+              <a href="https://github.com/MUNEEBM05" className="flex items-center gap-3 p-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-xl hover:bg-accent/10 transition-colors">
                 <Github className="h-5 w-5 text-accent" />
                 <span>/MUNEEBM05</span>
               </a>
-              <div className="flex items-center gap-3 p-4 bg-card rounded-xl">
+              <div className="flex items-center gap-3 p-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-xl">
                 <MapPin className="h-5 w-5 text-accent" />
                 <span>London, UK</span>
               </div>
             </div>
           </div>
 
-          <form className="space-y-4 bg-card rounded-2xl p-6">
+          <form className="space-y-4 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-6">
             <input type="text" placeholder="Your Name" className="w-full p-3 rounded-lg bg-secondary border-0 focus:ring-2 focus:ring-accent" />
             <input type="email" placeholder="Your Email" className="w-full p-3 rounded-lg bg-secondary border-0 focus:ring-2 focus:ring-accent" />
             <textarea placeholder="Your Message" rows={5} className="w-full p-3 rounded-lg bg-secondary border-0 focus:ring-2 focus:ring-accent"></textarea>

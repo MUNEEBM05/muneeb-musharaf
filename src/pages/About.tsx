@@ -29,7 +29,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio Section */}
           <div className="space-y-6 animate-fade-in">
-            <div className="bg-card rounded-2xl p-8 shadow-lg card-lift">
+            <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg card-lift">
               <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">My Journey</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
@@ -61,7 +61,7 @@ const About = () => {
           {/* Quick Facts & Skills Overview */}
           <div className="space-y-6">
             {/* Quick Facts */}
-            <div className="bg-gradient-card rounded-2xl p-8 shadow-lg animate-slide-in-left">
+            <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg animate-slide-in-left">
               <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 {quickFacts.map((fact, index) => {
@@ -110,7 +110,7 @@ const About = () => {
             </div>
 
             {/* Fun Facts */}
-            <div className="bg-card rounded-2xl p-8 shadow-lg math-grid">
+            <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg math-grid">
               <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Beyond Code</h3>
               <div className="space-y-3 text-muted-foreground">
                 <p>🎨 Landscape painting & sketching enthusiast</p>
