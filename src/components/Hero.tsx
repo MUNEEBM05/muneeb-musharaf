@@ -74,7 +74,7 @@ const Hero = () => {
                 <p className="text-sm text-muted-foreground">Academic Average</p>
               </div>
               <div className="space-y-1">
-                <p className="text-3xl font-bold text-accent">AI/ML</p>
+                <p className="text-3xl font-bold text-accent">Artificial Intelligence</p>
                 <p className="text-sm text-muted-foreground">Research Focus</p>
               </div>
             </div>
