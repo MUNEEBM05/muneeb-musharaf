@@ -156,7 +156,7 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
-                      <div className="w-12 h-12 bg-white rounded-lg p-1.5 shadow-sm">
+                      <div className="w-20 h-20 bg-white rounded-lg p-2 shadow-sm">
                         <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-contain" />
                       </div>
                       <div>
