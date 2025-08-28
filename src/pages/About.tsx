@@ -8,7 +8,7 @@ const About = () => {
   const quickFacts = [
     { icon: MapPin, label: "Location", value: "London, UK" },
     { icon: Briefcase, label: "Work Type", value: "Hybrid/Online" },
-    { icon: Heart, label: "Interests", value: "AI/ML, Computer Vision, Research, Ed-Tech" },
+    { icon: Heart, label: "Interests", value: "AI/ML, Computer Vision, Research, Deep Learning" },
   ];
 
   return (
