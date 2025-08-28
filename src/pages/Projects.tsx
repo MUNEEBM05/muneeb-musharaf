@@ -36,7 +36,7 @@ const Projects = () => {
       features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration", "Immersive Visualization"],
       role: "Lead Researcher",
       projectType: "Final Year Project",
-      projectCategory: "Ongoing Research",
+      projectCategory: "Ongoing",
       githubLink: null,
       highlights: [
         "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
