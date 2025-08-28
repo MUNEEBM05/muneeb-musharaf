@@ -110,7 +110,7 @@ const Education = () => {
                           {item.degree}
                         </p>
                       </div>
-                      <div className="flex items-center gap-2 text-muted-foreground bg-accent/10 px-3 py-1 rounded-full">
+                      <div className="flex items-center gap-2 text-muted-foreground bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1 rounded-full">
                         <Calendar className="h-4 w-4" />
                         <span className="text-sm font-medium">{item.period}</span>
                       </div>
@@ -137,7 +137,7 @@ const Education = () => {
                           {item.modules.map((module, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1.5 bg-gradient-to-r from-accent/10 to-teal/10 border border-accent/20 text-foreground rounded-full text-xs font-medium hover:from-accent/20 hover:to-teal/20 hover:border-accent/40 transition-all duration-300 cursor-pointer"
+                              className="px-3 py-1.5 bg-gradient-to-r from-accent/20 to-teal/20 border border-accent/30 text-foreground rounded-full text-xs font-medium hover:from-accent/30 hover:to-teal/30 hover:border-accent/50 transition-all duration-300 cursor-pointer"
                             >
                               {module}
                             </span>
@@ -156,7 +156,7 @@ const Education = () => {
                           {item.grades.map((grade, idx) => (
                             <div
                               key={idx}
-                              className="flex justify-between items-center p-3 bg-gradient-to-r from-accent/10 to-teal/10 border border-accent/20 rounded-lg hover:from-accent/20 hover:to-teal/20 hover:border-accent/40 transition-all duration-300"
+                              className="flex justify-between items-center p-3 bg-gradient-to-r from-accent/20 to-teal/20 border border-accent/30 rounded-lg hover:from-accent/30 hover:to-teal/30 hover:border-accent/50 transition-all duration-300"
                             >
                               <span className="text-sm font-medium text-foreground">
                                 {grade.subject}
