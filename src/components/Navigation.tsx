@@ -75,7 +75,19 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm" className="ml-4">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="ml-4"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/muneeb-cv.png';
+                link.download = 'Muneeb_Musharaf_CV.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>
@@ -124,7 +136,19 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm" className="w-full">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="w-full"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/muneeb-cv.png';
+                link.download = 'Muneeb_Musharaf_CV.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="mr-2 h-4 w-4" />
               Download CV
             </Button>

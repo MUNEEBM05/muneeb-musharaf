@@ -52,7 +52,19 @@ const About = () => {
             </div>
 
             {/* Download CV Button */}
-            <Button variant="hero" size="lg" className="w-full">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/muneeb-cv.png';
+                link.download = 'Muneeb_Musharaf_CV.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+            >
               <Download className="mr-2 h-5 w-5" />
               Download Full CV
             </Button>
