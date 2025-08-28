@@ -8,13 +8,13 @@ const Skills = () => {
       title: "Programming Languages",
       icon: Code2,
       color: "accent",
-      skills: ["Java", "Python", "JavaScript/TypeScript", "SQL", "HTML/CSS", "R", "MATLAB"],
+      skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "HTML/CSS", "R", "MATLAB"],
     },
     {
       title: "Frameworks & Tools",
       icon: Palette,
       color: "teal",
-      skills: ["Django", "React", "Flask/FastAPI", "Git/GitHub", "Docker", "IntelliJ/VS Code", "Jupyter/Colab"],
+      skills: ["Django", "React", "Flask", "FastAPI", "Git/GitHub", "Docker", "IntelliJ", "VS Code", "Jupyter", "Colab"],
     },
     {
       title: "ML & AI",
@@ -108,13 +108,11 @@ const Skills = () => {
               "Matplotlib",
               "BlueJ",
               "PyCharm",
-              "Agile/Scrum",
               "RESTful APIs",
               "WebSockets",
               "PostgreSQL",
               "MongoDB",
               "Redis",
-              "AWS Basics",
             ].map((tool, index) => (
               <span
                 key={index}
