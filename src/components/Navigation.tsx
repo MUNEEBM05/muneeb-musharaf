@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { downloadCVAsPDF } from "@/utils/pdfConverter";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,14 +80,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="ml-4"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/muneeb-cv.png';
-                link.download = 'Muneeb_Musharaf_CV.png';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+              onClick={downloadCVAsPDF}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
@@ -140,14 +134,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="w-full"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/muneeb-cv.png';
-                link.download = 'Muneeb_Musharaf_CV.png';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+              onClick={downloadCVAsPDF}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV

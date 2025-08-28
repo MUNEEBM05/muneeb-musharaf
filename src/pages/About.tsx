@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, MapPin, Briefcase, Heart } from "lucide-react";
+import { downloadCVAsPDF } from "@/utils/pdfConverter";
 
 const About = () => {
   const quickFacts = [
@@ -56,14 +57,7 @@ const About = () => {
               variant="hero" 
               size="lg" 
               className="w-full"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/muneeb-cv.png';
-                link.download = 'Muneeb_Musharaf_CV.png';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+              onClick={downloadCVAsPDF}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Full CV
