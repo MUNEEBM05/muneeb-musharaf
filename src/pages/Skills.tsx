@@ -72,7 +72,7 @@ const Skills = () => {
                   <div className={`p-3 bg-${category.color}/10 rounded-xl`}>
                     <Icon className={`h-6 w-6 text-${category.color}`} />
                   </div>
-                  <h3 className="text-xl font-bold text-primary">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
                     {category.title}
                   </h3>
                 </div>
@@ -95,7 +95,7 @@ const Skills = () => {
 
         {/* Additional Skills Tags */}
         <div className="mt-12 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 animate-scale-in">
-          <h3 className="text-2xl font-bold text-primary mb-6 text-center">
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-6 text-center">
             Additional Technologies & Tools
           </h3>
           <div className="flex flex-wrap justify-center gap-3">

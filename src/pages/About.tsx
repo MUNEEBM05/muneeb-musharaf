@@ -30,7 +30,7 @@ const About = () => {
           {/* Bio Section */}
           <div className="space-y-6 animate-fade-in">
             <div className="bg-card rounded-2xl p-8 shadow-lg card-lift">
-              <h2 className="text-2xl font-bold text-primary mb-4">My Journey</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">My Journey</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   I'm a final-year BSc Computer Science & Mathematics student at Queen Mary University of London, 
@@ -62,7 +62,7 @@ const About = () => {
           <div className="space-y-6">
             {/* Quick Facts */}
             <div className="bg-gradient-card rounded-2xl p-8 shadow-lg animate-slide-in-left">
-              <h3 className="text-xl font-bold text-primary mb-6">Quick Facts</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 {quickFacts.map((fact, index) => {
                   const Icon = fact.icon;
@@ -90,7 +90,7 @@ const About = () => {
 
             {/* Current Focus */}
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 animate-slide-in-right">
-              <h3 className="text-xl font-bold text-primary mb-4">Current Focus</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Current Focus</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-2">
                   <span className="w-2 h-2 bg-accent rounded-full mt-1.5"></span>
@@ -111,7 +111,7 @@ const About = () => {
 
             {/* Fun Facts */}
             <div className="bg-card rounded-2xl p-8 shadow-lg math-grid">
-              <h3 className="text-xl font-bold text-primary mb-4">Beyond Code</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Beyond Code</h3>
               <div className="space-y-3 text-muted-foreground">
                 <p>🎨 Landscape painting & sketching enthusiast</p>
                 <p>👨‍🏫 Mentor for university applications</p>

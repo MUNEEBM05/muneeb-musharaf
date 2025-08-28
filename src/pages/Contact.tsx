@@ -16,7 +16,7 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold">Get in Touch</h2>
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">Get in Touch</h2>
             <div className="space-y-4">
               <a href="mailto:muneebmusharaf@outlook.com" className="flex items-center gap-3 p-4 bg-card rounded-xl hover:bg-accent/10 transition-colors">
                 <Mail className="h-5 w-5 text-accent" />
