@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers } from "lucide-react";
+import { Github, Calendar, Code, ChevronDown, ChevronUp, TrendingUp, Globe, Gamepad2, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
@@ -26,7 +26,7 @@ const Projects = () => {
         "Integrated external API feeds for live cryptocurrency data",
         "Documented system design with UML diagrams and applied Agile project management practices"
       ],
-      icon: <Users className="h-5 w-5" />,
+      icon: <TrendingUp className="h-5 w-5" />,
     },
     {
       title: "Virtual Mars: Gaussian Splatting",
@@ -43,7 +43,7 @@ const Projects = () => {
         "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
         "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
       ],
-      icon: <School className="h-5 w-5" />,
+      icon: <Globe className="h-5 w-5" />,
     },
     {
       title: "Tetris Game",
@@ -62,7 +62,7 @@ const Projects = () => {
         "Managed source code with Git for version control and versioned releases",
         "Enhanced understanding of software lifecycle and user-centred design through iterative improvements"
       ],
-      icon: <User className="h-5 w-5" />,
+      icon: <Gamepad2 className="h-5 w-5" />,
     },
     {
       title: "Horse Race Simulator",
@@ -81,7 +81,7 @@ const Projects = () => {
         "Incorporated probability and simulation logic to generate realistic race outcomes",
         "Strengthened Java programming skills through debugging, testing, and iterative development"
       ],
-      icon: <School className="h-5 w-5" />,
+      icon: <Trophy className="h-5 w-5" />,
     },
   ];
 
