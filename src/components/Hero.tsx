@@ -184,11 +184,6 @@ const Hero = () => {
                 </div>
                 
                 {/* Tech stack badges */}
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2">
-                  <div className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-accent text-xs font-mono">
-                    AI/ML Engineer
-                  </div>
-                </div>
                 <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
                   <div className="px-3 py-1 bg-accent/10 border border-accent/30 rounded-full text-accent text-xs font-mono">
                     Full-Stack Developer
