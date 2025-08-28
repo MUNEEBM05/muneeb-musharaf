@@ -95,75 +95,81 @@ const Education = () => {
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 bg-card rounded-2xl p-8 shadow-lg card-lift">
-                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-primary">
-                        {item.institution}
-                      </h3>
-                      <p className="text-lg font-medium text-foreground mt-1">
-                        {item.degree}
-                      </p>
+                <div className="flex-1 relative bg-gradient-to-br from-accent/5 via-transparent to-teal/5 rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                  {/* Gradient border effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Inner content */}
+                  <div className="relative bg-card rounded-2xl p-8 h-full">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                      <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-teal bg-clip-text text-transparent">
+                          {item.institution}
+                        </h3>
+                        <p className="text-lg font-medium text-foreground mt-1">
+                          {item.degree}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2 text-muted-foreground bg-accent/10 px-3 py-1 rounded-full">
+                        <Calendar className="h-4 w-4" />
+                        <span className="text-sm font-medium">{item.period}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span className="text-sm">{item.period}</span>
-                    </div>
+
+                    {/* Grade/Graduation Info */}
+                    {item.grade && (
+                      <div className="flex items-center gap-2 mb-4">
+                        <Award className="h-5 w-5 text-accent animate-pulse" />
+                        <span className="font-semibold text-accent text-lg">{item.grade}</span>
+                        {item.graduation && (
+                          <span className="text-muted-foreground">• {item.graduation}</span>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Modules (for University) */}
+                    {item.modules && (
+                      <div>
+                        <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                          Key Modules:
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {item.modules.map((module, idx) => (
+                            <span
+                              key={idx}
+                              className="px-3 py-1.5 bg-gradient-to-r from-accent/10 to-teal/10 border border-accent/20 text-foreground rounded-full text-xs font-medium hover:from-accent/20 hover:to-teal/20 hover:border-accent/40 transition-all duration-300 cursor-pointer"
+                            >
+                              {module}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Grades (for A-Levels and GCSEs) */}
+                    {item.grades && (
+                      <div>
+                        <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                          Grades Achieved:
+                        </p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          {item.grades.map((grade, idx) => (
+                            <div
+                              key={idx}
+                              className="flex justify-between items-center p-3 bg-gradient-to-r from-accent/10 to-teal/10 border border-accent/20 rounded-lg hover:from-accent/20 hover:to-teal/20 hover:border-accent/40 transition-all duration-300"
+                            >
+                              <span className="text-sm font-medium text-foreground">
+                                {grade.subject}
+                              </span>
+                              <span className="font-bold text-accent text-lg ml-2">
+                                {grade.grade}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-
-                  {/* Grade/Graduation Info */}
-                  {item.grade && (
-                    <div className="flex items-center gap-2 mb-4">
-                      <Award className="h-5 w-5 text-accent" />
-                      <span className="font-semibold text-accent">{item.grade}</span>
-                      {item.graduation && (
-                        <span className="text-muted-foreground">• {item.graduation}</span>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Modules (for University) */}
-                  {item.modules && (
-                    <div>
-                      <p className="text-sm font-medium text-muted-foreground mb-3">
-                        Key Modules:
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {item.modules.map((module, idx) => (
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-                          >
-                            {module}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Grades (for A-Levels and GCSEs) */}
-                  {item.grades && (
-                    <div>
-                      <p className="text-sm font-medium text-muted-foreground mb-3">
-                        Grades Achieved:
-                      </p>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {item.grades.map((grade, idx) => (
-                          <div
-                            key={idx}
-                            className="flex justify-between items-center p-2 bg-secondary/50 rounded-lg"
-                          >
-                            <span className="text-sm text-muted-foreground">
-                              {grade.subject}
-                            </span>
-                            <span className="font-bold text-foreground ml-2">
-                              {grade.grade}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
