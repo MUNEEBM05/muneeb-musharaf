@@ -103,7 +103,7 @@ const Education = () => {
                   <div className="relative bg-card rounded-2xl p-8 h-full">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-accent bg-clip-text text-transparent">
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
                           {item.institution}
                         </h3>
                         <p className="text-lg font-medium text-foreground mt-1">
