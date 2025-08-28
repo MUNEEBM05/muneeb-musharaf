@@ -1,7 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Briefcase, Calendar, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { Calendar, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+
+// Import company logos
+import deepmindLogo from "@/assets/logos/deepmind-logo.png";
+import dataAnnotationLogo from "@/assets/logos/data-annotation-logo.png";
+import londonScienceLogo from "@/assets/logos/london-science-logo.png";
+import travelWorldLogo from "@/assets/logos/travel-world-logo.png";
+import qmConsultingLogo from "@/assets/logos/qm-consulting-logo.png";
+import microsoftLogo from "@/assets/logos/microsoft-logo.png";
+import stemsmartLogo from "@/assets/logos/stemsmart-logo.png";
 
 const Experience = () => {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -20,7 +29,7 @@ const Experience = () => {
         "Achieved strong evaluation metrics (Kendall Tau, Spearman correlation)",
         "Presented research poster and co-authoring paper with PhD mentors",
       ],
-      color: "accent",
+      logo: deepmindLogo,
     },
     {
       company: "Data Annotation",
@@ -35,7 +44,7 @@ const Experience = () => {
         "Small client projects using Python and SQL",
         "Gaining insights into model behavior and training processes",
       ],
-      color: "teal",
+      logo: dataAnnotationLogo,
     },
     {
       company: "London Science College",
@@ -50,7 +59,7 @@ const Experience = () => {
         "Achieving over 90% high grade rate among students",
         "Mentoring students for exam preparation and university applications",
       ],
-      color: "primary",
+      logo: londonScienceLogo,
     },
     {
       company: "My Travel World",
@@ -65,7 +74,7 @@ const Experience = () => {
         "Data-driven campaign optimization for increased ROI",
         "Cross-team collaboration for brand consistency",
       ],
-      color: "secondary",
+      logo: travelWorldLogo,
     },
     {
       company: "Queen Mary Ihsan Consulting Society",
@@ -80,7 +89,7 @@ const Experience = () => {
         "Event coordination and team management",
         "Mentoring junior members and facilitating workshops",
       ],
-      color: "accent",
+      logo: qmConsultingLogo,
     },
     {
       company: "Microsoft",
@@ -95,7 +104,7 @@ const Experience = () => {
         "Developed teamwork and agile workflow skills",
         "Rapid upskilling in cloud technologies and best practices",
       ],
-      color: "teal",
+      logo: microsoftLogo,
     },
     {
       company: "STEMSMART Programme",
@@ -110,7 +119,7 @@ const Experience = () => {
         "Collaborated with Cambridge University researchers",
         "Enhanced problem-solving and critical thinking abilities",
       ],
-      color: "primary",
+      logo: stemsmartLogo,
     },
   ];
 
@@ -147,8 +156,8 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-gradient-to-r from-accent/20 to-teal/20 rounded-lg">
-                        <Briefcase className="h-5 w-5 text-accent" />
+                      <div className="w-12 h-12 bg-white rounded-lg p-1.5 shadow-sm">
+                        <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
