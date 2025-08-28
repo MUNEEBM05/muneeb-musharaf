@@ -32,7 +32,7 @@ const About = () => {
           <div className="space-y-6 animate-fade-in">
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg card-lift">
               <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">My Journey</h2>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="space-y-4 text-foreground">
                 <p>
                   I'm a final-year BSc Computer Science & Mathematics student at Queen Mary University of London, 
                   currently maintaining a First-Class average. My journey in tech has been driven by a deep 
