@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageBackground from "@/components/PageBackground";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const Education = () => {
@@ -58,10 +59,11 @@ const Education = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <PageBackground />
       <Navigation />
       
-      <main className="container mx-auto px-4 pt-24 pb-12">
+      <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">

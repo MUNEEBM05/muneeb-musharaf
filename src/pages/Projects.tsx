@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import PageBackground from "@/components/PageBackground";
 import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -90,10 +91,11 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <PageBackground />
       <Navigation />
       
-      <main className="container mx-auto px-4 pt-24 pb-12">
+      <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         <div className="text-center mb-12 animate-fade-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

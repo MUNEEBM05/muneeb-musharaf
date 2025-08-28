@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import linkedinProfile from "@/assets/linkedin-profile.jpg";
 import muneebProfile from "@/assets/muneeb-profile.jpg";
 import newLinkedinProfile from "@/assets/new-linkedin-profile.jpg";
+import AnimatedTechBackground from "./AnimatedTechBackground";
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -39,6 +40,9 @@ const Hero = () => {
         
         {/* Single subtle glow orb */}
         <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-accent/[0.02] rounded-full blur-3xl" />
+        
+        {/* Animated Tech Lines Background */}
+        <AnimatedTechBackground />
       </div>
       
       {/* Interactive Glow - Ultra Subtle */}
