@@ -122,7 +122,7 @@ const Projects = () => {
                           {project.title}
                         </h3>
                         <p className="text-lg font-medium text-foreground mt-1">
-                          {project.role}
+                          {project.projectType}
                         </p>
                         <p className="text-sm text-muted-foreground mt-2">
                           {project.description}
@@ -136,9 +136,6 @@ const Projects = () => {
                       <Calendar className="h-4 w-4 text-blue-950" />
                       <span className="text-blue-950 font-medium">{project.period}</span>
                     </div>
-                    <Badge variant="secondary" className="self-start">
-                      {project.projectType}
-                    </Badge>
                     <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium self-start">
                       {project.projectCategory}
                     </span>
