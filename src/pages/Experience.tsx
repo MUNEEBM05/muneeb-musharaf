@@ -157,7 +157,7 @@ const Experience = () => {
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
                       <div className="w-20 h-20 bg-white rounded-lg p-2 shadow-sm">
-                        <img src={`${exp.logo}?v=3`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain" />
+                        <img src={`${exp.logo}?v=4`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
