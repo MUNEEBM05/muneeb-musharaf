@@ -143,14 +143,12 @@ const Experience = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Card Header */}
-              <div
-                className={`p-6 bg-gradient-to-r from-${exp.color}/10 to-${exp.color}/5 border-b border-border`}
-              >
+              <div className="p-6 bg-gradient-to-r from-accent/10 to-teal/10 border-b border-border">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
-                      <div className={`p-2 bg-${exp.color}/20 rounded-lg`}>
-                        <Briefcase className={`h-5 w-5 text-${exp.color}`} />
+                      <div className="p-2 bg-gradient-to-r from-accent/20 to-teal/20 rounded-lg">
+                        <Briefcase className="h-5 w-5 text-accent" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
@@ -175,7 +173,7 @@ const Experience = () => {
                       <MapPin className="h-4 w-4 text-muted-foreground" />
                       <span className="text-muted-foreground">{exp.location}</span>
                     </div>
-                    <span className={`px-3 py-1 bg-${exp.color}/20 text-${exp.color} rounded-full text-xs font-medium self-start`}>
+                    <span className="px-3 py-1 bg-gradient-to-r from-accent/20 to-teal/20 rounded-full text-xs font-medium self-start text-accent">
                       {exp.type}
                     </span>
                   </div>
