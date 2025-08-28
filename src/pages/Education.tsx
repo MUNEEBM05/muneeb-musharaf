@@ -100,7 +100,7 @@ const Education = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   {/* Inner content */}
-                  <div className="relative bg-card rounded-2xl p-8 h-full">
+                  <div className="relative bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 h-full">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                       <div>
                         <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
