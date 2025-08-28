@@ -63,8 +63,8 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-                Final-year BSc Computer Science & Mathematics student at QMUL, passionate about ML/AI, 
-                full-stack development, and innovative tech solutions.
+                Final-year BSc Computer Science & Mathematics student at QMUL, passionate about ML/AI 
+                and innovative tech solutions.
               </p>
             </div>
 
