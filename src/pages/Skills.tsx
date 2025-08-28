@@ -52,7 +52,7 @@ const Skills = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">
             Skills & Expertise
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground">
             A comprehensive toolkit spanning programming, AI/ML, mathematics, and soft skills
           </p>
         </div>
