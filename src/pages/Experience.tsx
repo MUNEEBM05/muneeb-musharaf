@@ -163,7 +163,7 @@ const Experience = () => {
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-4">
-                      <div className="w-28 h-28 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0" style={{ backgroundColor: exp.company === 'Data Annotation' ? 'black' : exp.company === 'London Science College' || exp.company === 'My Travel World' || exp.company === 'Queen Mary Ihsan Consulting Society' || exp.company === 'STEMSMART Programme' ? 'white' : 'rgb(72,132,244)' }}>
+                      <div className="w-28 h-28 rounded-lg overflow-hidden flex items-center justify-center flex-shrink-0" style={{ backgroundColor: exp.company === 'Data Annotation' ? 'black' : exp.company === 'London Science College' ? 'rgb(16,12,100)' : exp.company === 'My Travel World' || exp.company === 'Queen Mary Ihsan Consulting Society' || exp.company === 'STEMSMART Programme' ? 'white' : 'rgb(72,132,244)' }}>
                         <img src={`${exp.logo}?v=7`} alt={`${exp.company} logo`} loading="lazy" className="w-full h-full object-contain p-3" />
                       </div>
                       <div className="flex-1 min-w-0">
