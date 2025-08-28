@@ -79,49 +79,36 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Link to="/projects">
-                <Button 
-                  size="lg" 
-                  className="bg-accent hover:bg-accent-hover text-accent-foreground font-semibold px-8 py-6 text-lg"
-                >
-                  View Projects
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-accent/30 text-accent hover:bg-accent/10 hover:border-accent px-8 py-6 text-lg"
-                >
-                  Let's Connect
-                </Button>
-              </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-6">
-              {[
-                { href: "https://linkedin.com/in/muneebmusharaf", icon: Linkedin, label: "LinkedIn" },
-                { href: "https://github.com/MUNEEBM05", icon: Github, label: "GitHub" },
-                { href: "mailto:muneebmusharaf@outlook.com", icon: Mail, label: "Email" },
-              ].map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target={social.href.startsWith("mailto") ? undefined : "_blank"}
-                    rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                    className="text-muted-foreground hover:text-accent transition-colors duration-300"
-                    aria-label={social.label}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </a>
-                );
-              })}
+            {/* Social Links - Primary Focus */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a 
+                href="https://linkedin.com/in/muneebmusharaf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold"
+                aria-label="Connect on LinkedIn"
+              >
+                <Linkedin className="h-8 w-8" />
+                <span className="text-lg">LinkedIn</span>
+              </a>
+              <a 
+                href="https://github.com/MUNEEBM05" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold"
+                aria-label="View GitHub Profile"
+              >
+                <Github className="h-8 w-8" />
+                <span className="text-lg">GitHub</span>
+              </a>
+              <a 
+                href="mailto:muneebmusharaf@outlook.com"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold"
+                aria-label="Send Email"
+              >
+                <Mail className="h-8 w-8" />
+                <span className="text-lg">Email</span>
+              </a>
             </div>
           </div>
 
