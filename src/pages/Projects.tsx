@@ -131,8 +131,8 @@ const Projects = () => {
                   
                   <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                      <Calendar className="h-4 w-4" />
-                      <span>{project.period}</span>
+                      <Calendar className="h-4 w-4 text-blue-950" />
+                      <span className="text-blue-950 font-medium">{project.period}</span>
                     </div>
                     <Badge variant="secondary" className="self-start">
                       {project.projectType}

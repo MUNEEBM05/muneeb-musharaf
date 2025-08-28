@@ -110,9 +110,9 @@ const Education = () => {
                           {item.degree}
                         </p>
                       </div>
-                      <div className="flex items-center gap-2 text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full">
-                        <Calendar className="h-4 w-4" />
-                        <span className="text-sm font-medium">{item.period}</span>
+                      <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
+                        <Calendar className="h-4 w-4 text-blue-950" />
+                        <span className="text-sm font-medium text-blue-950">{item.period}</span>
                       </div>
                     </div>
 
