@@ -20,8 +20,6 @@ import stemsmartLogo from "@/assets/logos/stemsmart-logo.png";
 
 // Import certificates
 import deepmindRRPCertificate from "@/assets/certificates/deepmind-rrp-certificate.jpg";
-import microsoftCareerJourney from "@/assets/certificates/microsoft-career-journey.png";
-import microsoftInterviewSkills from "@/assets/certificates/microsoft-interview-skills.png";
 import microsoftCareerSkills from "@/assets/certificates/microsoft-career-skills.jpg";
 import microsoftInterviewSkillsNew from "@/assets/certificates/microsoft-interview-skills-new.jpg";
 import microsoftCompletion from "@/assets/certificates/microsoft-completion.png";
@@ -164,20 +162,6 @@ const Experience = () => {
       logo: microsoftLogo,
       logoBg: "bg-blue-500 dark:bg-blue-600",
       certificates: [
-        {
-          name: "Career Journey",
-          image: microsoftCareerJourney,
-          issuer: "Microsoft EMBRACE",
-          date: "2024",
-          type: "badge" as const,
-        },
-        {
-          name: "Interview Skills",
-          image: microsoftInterviewSkills,
-          issuer: "Microsoft EMBRACE",
-          date: "2024",
-          type: "badge" as const,
-        },
         {
           name: "Career Skills",
           image: microsoftCareerSkills,
