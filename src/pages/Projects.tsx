@@ -72,7 +72,7 @@ const Projects = () => {
       features: ["Custom GUI", "Betting System", "Race Animation", "Login Authentication", "Horse Customisation"],
       role: "Solo Developer",
       projectType: "University Project",
-      projectCategory: "Coursework",
+      projectCategory: "OOP Coursework",
       githubLink: "https://github.com/MUNEEBM05/HorseRaceSimulator",
       highlights: [
         "Developed a virtual horse racing simulator in Java with a betting feature using virtual currency",
