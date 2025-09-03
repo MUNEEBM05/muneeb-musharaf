@@ -54,7 +54,34 @@ const Hero = () => {
       />
       
       <div className="container mx-auto px-4 pt-24 md:pt-20 pb-10 relative z-10">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-8 items-center max-w-7xl mx-auto">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-8 items-center max-w-7xl mx-auto">
+          
+          {/* Mobile: Picture on top, smaller */}
+          <div className="lg:hidden relative flex justify-center">
+            <div className="relative">
+              {/* Outer glow effect */}
+              <div className="absolute inset-0 w-40 h-40 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent blur-2xl animate-pulse" />
+              
+              {/* Profile Circle */}
+              <div className="w-32 h-32 rounded-full relative overflow-hidden group">
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-hover to-accent p-[2px]">
+                  <div className="w-full h-full rounded-full bg-background" />
+                </div>
+                
+                {/* Profile Image */}
+                <img 
+                  src={newLinkedinProfile}
+                  alt="Muneeb Musharaf"
+                  className="absolute inset-[2px] w-[calc(100%-4px)] h-[calc(100%-4px)] object-cover rounded-full z-10"
+                />
+                
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/40 via-transparent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
+              </div>
+            </div>
+          </div>
+
           {/* Text Content */}
           <div className="space-y-6 md:space-y-8 animate-fade-up text-center lg:text-left">
             <div className="space-y-4 md:space-y-6">
@@ -116,8 +143,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Minimalist Graphic Section */}
-          <div className="relative flex justify-center mt-8 lg:mt-0">
+          {/* Desktop: Larger Graphic Section */}
+          <div className="hidden lg:flex relative justify-center mt-8 lg:mt-0">
             <div className="relative scale-75 sm:scale-90 md:scale-100">
               {/* Main Container */}
               <div className="relative">
