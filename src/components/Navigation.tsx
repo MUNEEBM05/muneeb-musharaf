@@ -89,7 +89,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors"
+            className="lg:hidden p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors text-white border border-white/20"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
