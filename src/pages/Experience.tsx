@@ -12,10 +12,10 @@ import {
 
 // Import company logos
 import deepmindLogo from "@/assets/logos/deepmind-logo.png";
-import dataAnnotationLogo from "@/assets/logos/data-annotation-logo.png";
-import londonScienceLogo from "@/assets/logos/london-science-logo.png";
+import dataAnnotationLogo from "@/assets/logos/data-annotation-logo-new.jpg";
+import londonScienceLogo from "@/assets/logos/london-science-college-new.png";
 import travelWorldLogo from "@/assets/logos/travel-world-logo.png";
-import qmConsultingLogo from "@/assets/logos/qm-consulting-logo.png";
+import qmConsultingLogo from "@/assets/logos/ihsan-consulting-new.png";
 import microsoftLogo from "@/assets/logos/microsoft-logo.png";
 import stemsmartLogo from "@/assets/logos/stemsmart-logo.png";
 
