@@ -109,6 +109,18 @@ const Hero = () => {
                 <p className="text-xs sm:text-sm text-muted-foreground">Research Focus</p>
               </div>
             </div>
+            
+            {/* Paper Acceptance Note */}
+            <div className="flex justify-center lg:justify-start">
+              <a 
+                href="https://openreview.net/pdf?id=tXyh8CY9kZ" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
+              >
+                <span className="font-bold text-accent">Recently had a paper accepted into a conference</span>
+              </a>
+            </div>
 
             {/* Social Links - Primary Focus */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">

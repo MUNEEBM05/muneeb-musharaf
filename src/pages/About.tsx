@@ -44,7 +44,15 @@ const About = () => {
                   As a current tutor at London Science College and freelance programmer/annotator at Data Annotation, 
                   I've developed strong skills in both teaching complex concepts and contributing to AI model training. 
                   My recent completion of the Google DeepMind Research Ready programme has further solidified my 
-                  passion for AI/ML research.
+                  passion for AI/ML research. I have also recently submitted a paper to LLM4Music @ ISMIR 2025, titled{' '}
+                  <a 
+                    href="https://openreview.net/pdf?id=tXyh8CY9kZ" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="font-bold text-accent hover:text-accent/80 transition-colors underline"
+                  >
+                    Evaluating Foundation Models on Timbre-Related Cognitive Tasks
+                  </a>.
                 </p>
                 <p>
                   Beyond academia, I enjoy landscape painting and sketching, which helps me maintain a creative 
