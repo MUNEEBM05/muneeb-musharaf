@@ -86,7 +86,7 @@ const Hero = () => {
           <div className="space-y-6 md:space-y-8 animate-fade-up text-center lg:text-left">
             <div className="space-y-4 md:space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold">
-                <span className="text-white">Hi, there!</span>
+                <span className="text-white">Hi there!</span>
                 <span className="block text-white mt-2">I am</span>
                 <span className="block text-accent mt-2">
                   Muneeb Musharaf
