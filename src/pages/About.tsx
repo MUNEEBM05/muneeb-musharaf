@@ -46,10 +46,10 @@ const About = () => {
                   My recent completion of the Google DeepMind Research Ready programme has further solidified my 
                   passion for AI/ML research. I have also recently submitted a paper to LLM4Music @ ISMIR 2025, titled{' '}
                   <a 
-                    href="https://openreview.net/pdf?id=tXyh8CY9kZ" 
+                    href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="font-bold text-accent hover:text-accent/80 transition-colors underline"
+                    className="font-bold text-amber-500 hover:text-amber-400 transition-colors"
                   >
                     Evaluating Foundation Models on Timbre-Related Cognitive Tasks
                   </a>.
