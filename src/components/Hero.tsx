@@ -156,7 +156,7 @@ const Hero = () => {
           </div>
 
           {/* Desktop: Larger Graphic Section */}
-          <div className="hidden lg:flex relative justify-center items-start mt-0 pt-8">
+          <div className="hidden lg:flex relative justify-center items-start mt-0 pt-0">
             <div className="relative scale-110">
               {/* Main Container */}
               <div className="relative">
