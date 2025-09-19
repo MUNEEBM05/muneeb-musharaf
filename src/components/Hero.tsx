@@ -156,22 +156,22 @@ const Hero = () => {
           </div>
 
           {/* Desktop: Larger Graphic Section */}
-          <div className="hidden lg:flex relative justify-center mt-8 lg:mt-0">
-            <div className="relative scale-75 sm:scale-90 md:scale-100">
+          <div className="hidden lg:flex relative justify-center items-center mt-0">
+            <div className="relative scale-110">
               {/* Main Container */}
               <div className="relative">
                 {/* Outer glow effect */}
-                <div className="absolute inset-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent blur-2xl animate-pulse" />
+                <div className="absolute inset-0 w-[28rem] h-[28rem] rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent blur-2xl animate-pulse" />
                 
-                {/* Orbital rings - hidden on small mobile */}
-                <div className="hidden sm:block absolute inset-0 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                {/* Orbital rings */}
+                <div className="absolute inset-0 w-[28rem] h-[28rem]">
                   <div className="absolute inset-4 rounded-full border border-accent/10 animate-spin-slow" />
                   <div className="absolute inset-8 rounded-full border border-accent/20 animate-spin-slow reverse" />
                   <div className="absolute inset-12 rounded-full border border-accent/30" />
                 </div>
                 
                 {/* Profile Circle */}
-                <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full relative overflow-hidden group">
+                <div className="w-96 h-96 rounded-full relative overflow-hidden group">
                   {/* Gradient border effect */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent via-accent-hover to-accent p-[2px]">
                     <div className="w-full h-full rounded-full bg-background" />
@@ -188,18 +188,18 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/40 via-transparent to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
                 </div>
                 
-                {/* Geometric accent shapes - hidden on mobile */}
-                <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                {/* Geometric accent shapes */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
-                <div className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-tr from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+                  <div className="w-20 h-20 bg-gradient-to-tr from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
-                <div className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-bl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2">
+                  <div className="w-20 h-20 bg-gradient-to-bl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
-                <div className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2">
-                  <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-tl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2">
+                  <div className="w-20 h-20 bg-gradient-to-tl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 
                 {/* Tech stack badges */}
