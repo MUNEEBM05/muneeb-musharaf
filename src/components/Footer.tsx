@@ -80,11 +80,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-light/20 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-primary-foreground/60">
             <p>© {new Date().getFullYear()} Muneeb Musharaf. All rights reserved.</p>
-            <p className="flex items-center gap-1">
-              Built with <Heart className="h-3 w-3 text-accent" /> using React & Tailwind
-            </p>
           </div>
         </div>
       </div>
