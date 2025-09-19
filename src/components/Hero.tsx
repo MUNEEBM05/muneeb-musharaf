@@ -53,7 +53,7 @@ const Hero = () => {
         }}
       />
       
-      <div className="container mx-auto px-4 pt-16 md:pt-12 pb-10 relative z-10">
+      <div className="container mx-auto px-4 pt-24 md:pt-20 pb-10 relative z-10">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-8 items-center max-w-7xl mx-auto">
           
           {/* Mobile: Picture on top, smaller */}
