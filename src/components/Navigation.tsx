@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { downloadCVAsPDF } from "@/utils/pdfConverter";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,7 +78,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="ml-4"
-              onClick={downloadCVAsPDF}
+              onClick={() => window.open('https://docs.google.com/document/d/1LzLikbrzpv3ZZFj4S04duhIL_Q2NZkDQ/export?format=pdf&ouid=108917697824152142633&rtpof=true&sd=true', '_blank')}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
@@ -133,7 +132,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="w-full"
-              onClick={downloadCVAsPDF}
+              onClick={() => window.open('https://docs.google.com/document/d/1LzLikbrzpv3ZZFj4S04duhIL_Q2NZkDQ/export?format=pdf&ouid=108917697824152142633&rtpof=true&sd=true', '_blank')}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
