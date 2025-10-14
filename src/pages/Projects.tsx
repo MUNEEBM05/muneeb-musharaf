@@ -11,6 +11,23 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Virtual Mars: Gaussian Splatting",
+      period: "Aug 2025 – Present",
+      description: "Exploring Gaussian Splatting to render scenes from NASA Mars rovers",
+      tech: ["Python", "3D Gaussian Splatting", "SfM", "Computer Vision"],
+      features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration", "Immersive Visualization"],
+      role: "Lead Researcher",
+      projectType: "Final Year Project",
+      projectCategory: "Ongoing Research",
+      githubLink: null,
+      highlights: [
+        "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
+        "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
+        "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
+      ],
+      icon: <School className="h-5 w-5" />,
+    },
+    {
       title: "Cryptocurrency Trading Platform",
       period: "Jan 2025 – Aug 2025",
       description: "Secure web-based cryptocurrency trading platform with Django backend and React frontend",
@@ -28,23 +45,6 @@ const Projects = () => {
         "Documented system design with UML diagrams and applied Agile project management practices"
       ],
       icon: <Users className="h-5 w-5" />,
-    },
-    {
-      title: "Virtual Mars: Gaussian Splatting",
-      period: "Aug 2025 – Present",
-      description: "Exploring Gaussian Splatting to render scenes from NASA Mars rovers",
-      tech: ["Python", "3D Gaussian Splatting", "SfM", "Computer Vision"],
-      features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration", "Immersive Visualization"],
-      role: "Lead Researcher",
-      projectType: "Final Year Project",
-      projectCategory: "Ongoing Research",
-      githubLink: null,
-      highlights: [
-        "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
-        "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
-        "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
-      ],
-      icon: <School className="h-5 w-5" />,
     },
     {
       title: "Tetris Game",
