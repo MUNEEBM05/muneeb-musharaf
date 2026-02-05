@@ -66,7 +66,7 @@ const About = () => {
               variant="hero" 
               size="lg" 
               className="w-full"
-              onClick={() => window.open('https://docs.google.com/document/d/1LzLikbrzpv3ZZFj4S04duhIL_Q2NZkDQ/export?format=pdf&ouid=108917697824152142633&rtpof=true&sd=true', '_blank')}
+              onClick={() => window.open('/MuneebMusharafCV.pdf', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Full CV

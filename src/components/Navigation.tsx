@@ -78,7 +78,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="ml-4"
-              onClick={() => window.open('https://docs.google.com/document/d/1LzLikbrzpv3ZZFj4S04duhIL_Q2NZkDQ/export?format=pdf&ouid=108917697824152142633&rtpof=true&sd=true', '_blank')}
+              onClick={() => window.open('/MuneebMusharafCV.pdf', '_blank')}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
@@ -132,7 +132,7 @@ const Navigation = () => {
               variant="hero" 
               size="sm" 
               className="w-full"
-              onClick={() => window.open('https://docs.google.com/document/d/1LzLikbrzpv3ZZFj4S04duhIL_Q2NZkDQ/export?format=pdf&ouid=108917697824152142633&rtpof=true&sd=true', '_blank')}
+              onClick={() => window.open('/MuneebMusharafCV.pdf', '_blank')}
             >
               <Download className="mr-2 h-4 w-4" />
               Download CV
