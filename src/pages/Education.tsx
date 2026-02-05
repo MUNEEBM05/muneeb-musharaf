@@ -6,6 +6,16 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 const Education = () => {
   const education = [
     {
+      institution: "Martingale Scholarship",
+      degree: "",
+      period: "",
+      bullets: [
+        "Selected research-focused scholarship awarded following application and interview process.",
+        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham)",
+      ],
+      color: "accent",
+    },
+    {
       institution: "Queen Mary University of London",
       degree: "BSc Computer Science & Mathematics",
       period: "Sep 2023 – Present",
@@ -108,14 +118,18 @@ const Education = () => {
                         <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
                           {item.institution}
                         </h3>
-                        <p className="text-lg font-medium text-foreground mt-1">
-                          {item.degree}
-                        </p>
+                        {item.degree && (
+                          <p className="text-lg font-medium text-foreground mt-1">
+                            {item.degree}
+                          </p>
+                        )}
                       </div>
-                      <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                        <Calendar className="h-4 w-4 text-blue-950" />
-                        <span className="text-sm font-medium text-blue-950">{item.period}</span>
-                      </div>
+                      {item.period && (
+                        <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
+                          <Calendar className="h-4 w-4 text-blue-950" />
+                          <span className="text-sm font-medium text-blue-950">{item.period}</span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Grade/Graduation Info */}
@@ -146,6 +160,17 @@ const Education = () => {
                           ))}
                         </div>
                       </div>
+                    )}
+
+                    {/* Bullet Points (for Scholarship) */}
+                    {item.bullets && (
+                      <ul className="list-disc list-inside space-y-2 text-foreground">
+                        {item.bullets.map((bullet, idx) => (
+                          <li key={idx} className="text-sm leading-relaxed">
+                            {bullet}
+                          </li>
+                        ))}
+                      </ul>
                     )}
 
                     {/* Grades (for A-Levels and GCSEs) */}
