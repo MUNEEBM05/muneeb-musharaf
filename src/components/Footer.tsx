@@ -43,7 +43,7 @@ const Footer = () => {
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="mailto:muneebmusharaf@outlook.com"
+                href="mailto:muneebmusharaf8@gmail.com"
                 className="p-2 rounded-lg bg-primary hover:bg-primary-light transition-colors"
                 aria-label="Email"
               >
@@ -73,7 +73,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Get in Touch</h4>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <p>📍 London, UK</p>
-              <p>✉️ muneebmusharaf@outlook.com</p>
+              <p>✉️ muneebmusharaf8@gmail.com</p>
               <p>💼 Open to opportunities</p>
             </div>
           </div>
