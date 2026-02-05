@@ -145,7 +145,7 @@ const Hero = () => {
                 <span>GitHub</span>
               </a>
               <a 
-                href="mailto:muneebmusharaf@outlook.com"
+                href="mailto:muneebmusharaf8@gmail.com"
                 className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold text-sm sm:text-base"
                 aria-label="Send Email"
               >
