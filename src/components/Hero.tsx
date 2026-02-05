@@ -112,14 +112,19 @@ const Hero = () => {
             
             {/* Paper Acceptance Note */}
             <div className="flex justify-center lg:justify-start">
-              <a 
-                href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
-              >
-                <span className="font-bold text-accent">Recently had a paper accepted into a conference</span>
-              </a>
+              <div className="flex flex-col gap-2">
+                <a 
+                  href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
+                >
+                  <span className="font-bold text-accent">Recently had a paper accepted into a conference</span>
+                </a>
+                <div className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30">
+                  <span className="font-bold text-accent">Martingale Scholarship Applicant</span>
+                </div>
+              </div>
             </div>
 
             {/* Social Links - Primary Focus */}
