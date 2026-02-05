@@ -164,10 +164,11 @@ const Education = () => {
 
                     {/* Bullet Points (for Scholarship) */}
                     {item.bullets && (
-                      <ul className="list-disc list-inside space-y-2 text-foreground">
+                      <ul className="space-y-2 text-foreground">
                         {item.bullets.map((bullet, idx) => (
-                          <li key={idx} className="text-sm leading-relaxed">
-                            {bullet}
+                          <li key={idx} className="text-sm leading-relaxed flex gap-2">
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                            <span>{bullet}</span>
                           </li>
                         ))}
                       </ul>
