@@ -95,6 +95,7 @@ const Education = () => {
             {education.map((item, index) => (
               <div
                 key={index}
+                id={item.institution === "Martingale Scholarship" ? "martingale-scholarship" : undefined}
                 className="relative flex gap-8 mb-12 animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
