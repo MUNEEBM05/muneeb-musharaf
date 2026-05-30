@@ -12,6 +12,7 @@ const Education = () => {
       bullets: [
         "Selected as 1 of 12 people to be in the scholarship.",
         "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham).",
+        "Will be attending UCL for AI and Robotics MSc starting October 2026.",
       ],
       color: "accent",
     },
