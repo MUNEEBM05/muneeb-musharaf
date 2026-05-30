@@ -1,17 +1,28 @@
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import { GraduationCap, Calendar, Award } from "lucide-react";
 
 const Education = () => {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, []);
   const education = [
     {
       institution: "Martingale Scholarship",
       degree: "",
       period: "",
       bullets: [
-        "Selected research-focused scholarship awarded following application and interview process.",
-        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham)",
+        "Selected as 1 of 12 people to be in the scholarship.",
+        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham).",
+        "Will be attending UCL for AI and Robotics MSc starting October 2026.",
       ],
       color: "accent",
     },
@@ -94,6 +105,7 @@ const Education = () => {
             {education.map((item, index) => (
               <div
                 key={index}
+                id={item.institution === "Martingale Scholarship" ? "martingale-scholarship" : undefined}
                 className="relative flex gap-8 mb-12 animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
