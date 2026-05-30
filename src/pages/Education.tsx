@@ -10,8 +10,8 @@ const Education = () => {
       degree: "",
       period: "",
       bullets: [
-        "Selected research-focused scholarship awarded following application and interview process.",
-        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham)",
+        "Selected as 1 of 12 people to be in the scholarship.",
+        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham).",
       ],
       color: "accent",
     },
