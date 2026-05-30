@@ -121,12 +121,12 @@ const Hero = () => {
                 >
                   <span className="font-bold text-accent">Recently had a paper accepted into a conference</span>
                 </a>
-                <a
-                  href="/education#martingale-scholarship"
+                <Link
+                  to="/education#martingale-scholarship"
                   className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
                 >
                   <span className="font-bold text-accent">Martingale Scholarship Member</span>
-                </a>
+                </Link>
               </div>
             </div>
 
