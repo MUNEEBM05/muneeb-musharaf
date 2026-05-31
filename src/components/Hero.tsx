@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center overflow-hidden py-20 md:py-0" style={{ backgroundColor: 'rgba(12,15,34,255)' }}>
+    <section className="min-h-screen relative flex items-start justify-center pb-8 md:pb-12" style={{ backgroundColor: 'rgba(12,15,34,255)' }}>
       {/* Minimal Background Effect */}
       <div className="absolute inset-0">
         {/* Very subtle gradient overlay */}
@@ -111,23 +111,21 @@ const Hero = () => {
             </div>
             
             {/* Paper Acceptance Note */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="flex flex-col gap-2">
-                <a 
-                  href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
-                >
-                  <span className="font-bold text-accent">Recently had a paper accepted into a conference</span>
-                </a>
-                <Link
-                  to="/education#martingale-scholarship"
-                  className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-6 py-3 rounded-full backdrop-blur-sm border border-accent/30 hover:border-accent/50 transition-all duration-300"
-                >
-                  <span className="font-bold text-accent">Martingale Scholarship Member</span>
-                </Link>
-              </div>
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              <a
+                href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1.5 rounded-full border border-accent/30 hover:border-accent/50 transition-all duration-300"
+              >
+                <span className="text-xs font-semibold text-accent">Published Paper @ ISMIR 2025</span>
+              </a>
+              <Link
+                to="/education#martingale-scholarship"
+                className="inline-block bg-gradient-to-r from-accent/20 to-teal/20 px-3 py-1.5 rounded-full border border-accent/30 hover:border-accent/50 transition-all duration-300"
+              >
+                <span className="text-xs font-semibold text-accent">Martingale Scholar</span>
+              </Link>
             </div>
 
             {/* Social Links - Primary Focus */}

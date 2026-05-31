@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
-import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers } from "lucide-react";
+import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers, Brain, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
@@ -20,12 +20,33 @@ const Projects = () => {
       projectType: "Final Year Project",
       projectCategory: "Ongoing Research",
       githubLink: null,
+      paperLink: null,
       highlights: [
         "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
         "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
         "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
       ],
       icon: <School className="h-5 w-5" />,
+    },
+    {
+      title: "Evaluating Foundation Models on Timbre-Related Cognitive Tasks",
+      period: "Jun 2025 – Aug 2025",
+      description: "Published research paper from the Google DeepMind Research Ready Programme, accepted at LLM4Music @ ISMIR 2025",
+      tech: ["Python", "Large Language Models", "Audio Processing", "Cognitive Science", "Zero-shot Evaluation"],
+      features: ["Published Paper", "Foundation Model Evaluation", "Timbre Analysis", "ISMIR 2025", "Zero-shot Tasks"],
+      role: "AI Researcher — Google DeepMind Research Ready Programme",
+      projectType: "Research Publication",
+      projectCategory: "AI Research",
+      githubLink: null,
+      paperLink: "https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms",
+      highlights: [
+        "Selected as 1 of 12 participants globally for the Google DeepMind Research Ready Programme (Jun–Aug 2025)",
+        "Investigated how well large language models understand timbre — a nuanced perceptual quality of sound central to music cognition",
+        "Designed zero-shot evaluation tasks benchmarking foundation models against human cognitive science results on timbre perception",
+        "Paper accepted to LLM4Music @ ISMIR 2025, a leading international venue for music information retrieval and AI",
+        "Contributed to emerging understanding of whether LLMs can model subtle auditory concepts beyond surface-level pattern recognition"
+      ],
+      icon: <Brain className="h-5 w-5" />,
     },
     {
       title: "Cryptocurrency Trading Platform",
@@ -37,6 +58,7 @@ const Projects = () => {
       projectType: "University Group Project",
       projectCategory: "Software Engineering",
       githubLink: null,
+      paperLink: null,
       highlights: [
         "Led a team to develop a secure web-based cryptocurrency trading platform using Django (backend) and React (frontend)",
         "Designed security features such as two-factor authentication and trading circuit breakers to protect users",
@@ -56,6 +78,7 @@ const Projects = () => {
       projectType: "Personal Project",
       projectCategory: "Game Development",
       githubLink: "https://github.com/MUNEEBM05/Tetris",
+      paperLink: null,
       highlights: [
         "Created a fully functioning Tetris game in Java using the Javax library",
         "Implemented scoring, line-clearing logic, and difficulty progression",
@@ -75,6 +98,7 @@ const Projects = () => {
       projectType: "University Project",
       projectCategory: "Coursework",
       githubLink: "https://github.com/MUNEEBM05/HorseRaceSimulator",
+      paperLink: null,
       highlights: [
         "Developed a virtual horse racing simulator in Java with a betting feature using virtual currency",
         "Designed a custom GUI with login authentication, race animations, and horse customisation",
@@ -178,13 +202,23 @@ const Projects = () => {
                   <div className="flex items-center justify-between pt-2">
                     <div className="flex gap-3">
                       {project.githubLink && (
-                        <Button 
-                          variant="accent" 
+                        <Button
+                          variant="accent"
                           size="sm"
                           onClick={() => window.open(project.githubLink, '_blank')}
                         >
                           <Github className="mr-2 h-4 w-4" />
                           View Code
+                        </Button>
+                      )}
+                      {project.paperLink && (
+                        <Button
+                          variant="accent"
+                          size="sm"
+                          onClick={() => window.open(project.paperLink!, '_blank')}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          View Paper
                         </Button>
                       )}
                     </div>

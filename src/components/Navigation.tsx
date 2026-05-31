@@ -39,10 +39,10 @@ const Navigation = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-[100] transition-all duration-300",
-        "bg-primary-dark backdrop-blur-lg",
-        isScrolled && "shadow-lg border-b border-border/20"
+        "fixed top-0 left-0 right-0 z-[9999] transition-all duration-300",
+        isScrolled && "shadow-lg border-b border-white/10"
       )}
+      style={{ backgroundColor: 'rgba(12,15,34,0.97)' }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -58,7 +58,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -88,7 +88,8 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors text-white border border-white/20"
+            className="xl:hidden p-2 rounded-lg transition-colors"
+            style={{ color: 'white', backgroundColor: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)' }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -103,10 +104,10 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "lg:hidden absolute top-full left-0 right-0 backdrop-blur-lg border-b border-border/20 transition-all duration-300 overflow-hidden",
-          "bg-primary-dark/95",
+          "xl:hidden absolute top-full left-0 right-0 border-b border-white/10 transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
         )}
+        style={{ backgroundColor: 'rgba(12,15,34,0.99)' }}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
