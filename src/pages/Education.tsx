@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar, Award, Rocket, BookOpen, School } from "lucide-react";
 
 const Education = () => {
   useEffect(() => {
@@ -21,16 +21,16 @@ const Education = () => {
       period: "",
       bullets: [
         "Selected as 1 of 12 people to be in the scholarship.",
-        "Provides guaranteed funding contingent upon successful admission to a partner university programme in Artificial Intelligence or related fields at designated universities (including Cambridge, UCL, Edinburgh, QMUL, Birmingham).",
-        "Will be attending UCL for AI and Robotics MSc starting October 2026.",
+        "Provides guaranteed funding for a postgraduate programme in Artificial Intelligence.",
+        "Confirmed: MSc in AI and Robotics at UCL, starting October 2026.",
       ],
       color: "accent",
+      icon: Rocket,
     },
     {
       institution: "Queen Mary University of London",
       degree: "BSc Computer Science & Mathematics",
-      period: "Sep 2023 – Present",
-      graduation: "Expected Aug 2026",
+      period: "Sep 2023 – Jul 2026",
       grade: "First-Class Average",
       modules: [
         "Procedural & OOP",
@@ -46,6 +46,7 @@ const Education = () => {
         "Complex Variables",
       ],
       color: "accent",
+      icon: GraduationCap,
     },
     {
       institution: "Newham Collegiate Sixth Form Centre",
@@ -57,6 +58,7 @@ const Education = () => {
         { subject: "Physics", grade: "A" },
       ],
       color: "teal",
+      icon: BookOpen,
     },
     {
       institution: "Robert Clack School",
@@ -76,6 +78,7 @@ const Education = () => {
         { subject: "Geography", grade: "7" },
       ],
       color: "primary",
+      icon: School,
     },
   ];
 
@@ -83,7 +86,7 @@ const Education = () => {
     <div className="min-h-screen bg-background relative">
       <PageBackground />
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
@@ -98,126 +101,129 @@ const Education = () => {
         {/* Timeline */}
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-teal to-primary"></div>
+            {/* Timeline Line - static track */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
+            {/* Timeline Line - animated fill, draws itself in top to bottom */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent2 to-teal origin-top animate-grow-down"></div>
 
             {/* Education Items */}
-            {education.map((item, index) => (
-              <div
-                key={index}
-                id={item.institution === "Martingale Scholarship" ? "martingale-scholarship" : undefined}
-                className="relative flex gap-8 mb-12 animate-fade-in"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                {/* Timeline Dot */}
-                <div className="relative z-10">
-                  <div
-                    className="w-16 h-16 rounded-full bg-accent2 flex items-center justify-center shadow-glow"
-                  >
-                    <GraduationCap className="h-8 w-8 text-white" />
+            {education.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={index}
+                  id={item.institution === "Martingale Scholarship" ? "martingale-scholarship" : undefined}
+                  className="relative flex gap-8 mb-12 animate-fade-in"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  {/* Timeline Dot */}
+                  <div className="relative z-10">
+                    <div
+                      className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent2 flex items-center justify-center shadow-glow animate-pop-in opacity-0"
+                      style={{ animationDelay: `${index * 200 + 300}ms` }}
+                    >
+                      <Icon className="h-8 w-8 text-white" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Content Card */}
-                <div className="flex-1 relative bg-gradient-to-br from-accent/5 via-transparent to-teal/5 rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
-                  {/* Gradient border effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Inner content */}
-                  <div className="relative bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 h-full">
-                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
-                          {item.institution}
-                        </h3>
-                        {item.degree && (
-                          <p className="text-lg font-medium text-foreground mt-1">
-                            {item.degree}
-                          </p>
+                  {/* Content Card */}
+                  <div className="flex-1 relative bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                    {/* Gradient border effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                    {/* Inner content */}
+                    <div className="relative rounded-2xl p-8 h-full">
+                      <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
+                            {item.institution}
+                          </h3>
+                          {item.degree && (
+                            <p className="text-lg font-medium text-foreground mt-1">
+                              {item.degree}
+                            </p>
+                          )}
+                        </div>
+                        {item.period && (
+                          <div className="flex items-center gap-2 bg-accent2/20 px-3 py-1 rounded-full">
+                            <Calendar className="h-4 w-4 text-accent2" />
+                            <span className="text-sm font-medium text-accent2">{item.period}</span>
+                          </div>
                         )}
                       </div>
-                      {item.period && (
-                        <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
-                          <Calendar className="h-4 w-4 text-accent2" />
-                          <span className="text-sm font-medium text-accent2">{item.period}</span>
+
+                      {/* Grade Info */}
+                      {item.grade && (
+                        <div className="flex items-center gap-2 mb-4">
+                          <Award className="h-5 w-5 text-accent animate-pulse" />
+                          <span className="font-semibold text-accent text-lg">{item.grade}</span>
+                        </div>
+                      )}
+
+                      {/* Modules (for University) */}
+                      {item.modules && (
+                        <div>
+                          <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                            Key Modules:
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {item.modules.map((module, idx) => (
+                              <span
+                                key={idx}
+                                className="px-3 py-1.5 bg-accent2/20 border border-accent2/30 text-foreground rounded-full text-xs font-medium hover:bg-accent2/30 transition-all duration-300 cursor-pointer"
+                              >
+                                {module}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Bullet Points (for Scholarship) */}
+                      {item.bullets && (
+                        <ul className="space-y-2 text-foreground">
+                          {item.bullets.map((bullet, idx) => (
+                            <li key={idx} className="text-sm leading-relaxed flex gap-2">
+                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Grades (for A-Levels and GCSEs) */}
+                      {item.grades && (
+                        <div>
+                          <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                            Grades Achieved:
+                          </p>
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            {item.grades.map((grade, idx) => (
+                              <div
+                                key={idx}
+                                className="flex justify-between items-center p-3 bg-accent2/20 border border-accent2/30 rounded-lg hover:bg-accent2/30 transition-all duration-300"
+                              >
+                                <span className="text-sm font-medium text-foreground">
+                                  {grade.subject}
+                                </span>
+                                <span className="font-bold text-accent text-lg ml-2">
+                                  {grade.grade}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
-
-                    {/* Grade/Graduation Info */}
-                    {item.grade && (
-                      <div className="flex items-center gap-2 mb-4">
-                        <Award className="h-5 w-5 text-accent animate-pulse" />
-                        <span className="font-semibold text-accent text-lg">{item.grade}</span>
-                        {item.graduation && (
-                          <span className="text-muted-foreground">• {item.graduation}</span>
-                        )}
-                      </div>
-                    )}
-
-                    {/* Modules (for University) */}
-                    {item.modules && (
-                      <div>
-                        <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
-                          Key Modules:
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {item.modules.map((module, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1.5 bg-accent2/10 border border-accent2/30 text-foreground rounded-full text-xs font-medium hover:bg-accent2/20 transition-all duration-300 cursor-pointer"
-                            >
-                              {module}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Bullet Points (for Scholarship) */}
-                    {item.bullets && (
-                      <ul className="space-y-2 text-foreground">
-                        {item.bullets.map((bullet, idx) => (
-                          <li key={idx} className="text-sm leading-relaxed flex gap-2">
-                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                            <span>{bullet}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-
-                    {/* Grades (for A-Levels and GCSEs) */}
-                    {item.grades && (
-                      <div>
-                        <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
-                          Grades Achieved:
-                        </p>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                          {item.grades.map((grade, idx) => (
-                            <div
-                              key={idx}
-                              className="flex justify-between items-center p-3 bg-accent2/10 border border-accent2/30 rounded-lg hover:bg-accent2/20 transition-all duration-300"
-                            >
-                              <span className="text-sm font-medium text-foreground">
-                                {grade.subject}
-                              </span>
-                              <span className="font-bold text-accent text-lg ml-2">
-                                {grade.grade}
-                              </span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
         {/* Achievements Summary */}
-        <div className="mt-16 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 text-center animate-scale-in">
+        <div className="mt-16 bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 text-center animate-scale-in">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>

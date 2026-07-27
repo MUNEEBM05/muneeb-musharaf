@@ -171,9 +171,9 @@ const Hero = () => {
                 
                 {/* Orbital rings */}
                 <div className="absolute inset-0 w-[28rem] h-[28rem]">
-                  <div className="absolute inset-4 rounded-full border border-accent/10 animate-spin-slow" />
-                  <div className="absolute inset-8 rounded-full border border-accent/20 animate-spin-slow reverse" />
-                  <div className="absolute inset-12 rounded-full border border-accent/30" />
+                  <div className="absolute inset-4 rounded-full border border-accent2/25 animate-spin-slow" />
+                  <div className="absolute inset-8 rounded-full border border-accent2/35 animate-spin-slow reverse" />
+                  <div className="absolute inset-12 rounded-full border border-accent2/45" />
                 </div>
                 
                 {/* Profile Circle */}
@@ -196,16 +196,16 @@ const Hero = () => {
                 
                 {/* Geometric accent shapes */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                  <div className="w-20 h-20 bg-gradient-to-br from-accent2/50 to-accent2/20 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                  <div className="w-20 h-20 bg-gradient-to-tr from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                  <div className="w-20 h-20 bg-gradient-to-tr from-accent2/50 to-accent2/20 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2">
-                  <div className="w-20 h-20 bg-gradient-to-bl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                  <div className="w-20 h-20 bg-gradient-to-bl from-accent2/50 to-accent2/20 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2">
-                  <div className="w-20 h-20 bg-gradient-to-tl from-accent/30 to-accent/10 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
+                  <div className="w-20 h-20 bg-gradient-to-tl from-accent2/50 to-accent2/20 rotate-45 transform hover:rotate-90 transition-transform duration-500" />
                 </div>
                 
                 {/* Tech stack badges */}

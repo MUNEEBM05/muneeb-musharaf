@@ -12,7 +12,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Virtual Mars: Gaussian Splatting",
-      period: "Aug 2025 – Present",
+      period: "Aug 2025 – May 2026",
       description: "Exploring Gaussian Splatting to render scenes from NASA Mars rovers",
       tech: ["Python", "3D Gaussian Splatting", "SfM", "Computer Vision"],
       features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration", "Immersive Visualization"],
@@ -21,6 +21,7 @@ const Projects = () => {
       projectCategory: "Ongoing Research",
       githubLink: null,
       paperLink: null,
+      reportLink: "/virtual-mars-final-report.pdf",
       highlights: [
         "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
         "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
@@ -39,6 +40,7 @@ const Projects = () => {
       projectCategory: "AI Research",
       githubLink: null,
       paperLink: "https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms",
+      reportLink: null,
       highlights: [
         "Selected as 1 of 12 participants globally for the Google DeepMind Research Ready Programme (Jun–Aug 2025)",
         "Investigated how well large language models understand timbre — a nuanced perceptual quality of sound central to music cognition",
@@ -59,6 +61,7 @@ const Projects = () => {
       projectCategory: "Software Engineering",
       githubLink: null,
       paperLink: null,
+      reportLink: null,
       highlights: [
         "Led a team to develop a secure web-based cryptocurrency trading platform using Django (backend) and React (frontend)",
         "Designed security features such as two-factor authentication and trading circuit breakers to protect users",
@@ -79,6 +82,7 @@ const Projects = () => {
       projectCategory: "Game Development",
       githubLink: "https://github.com/MUNEEBM05/Tetris",
       paperLink: null,
+      reportLink: null,
       highlights: [
         "Created a fully functioning Tetris game in Java using the Javax library",
         "Implemented scoring, line-clearing logic, and difficulty progression",
@@ -99,6 +103,7 @@ const Projects = () => {
       projectCategory: "Coursework",
       githubLink: "https://github.com/MUNEEBM05/HorseRaceSimulator",
       paperLink: null,
+      reportLink: null,
       highlights: [
         "Developed a virtual horse racing simulator in Java with a betting feature using virtual currency",
         "Designed a custom GUI with login authentication, race animations, and horse customisation",
@@ -132,11 +137,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Header */}
-              <div className="p-6 bg-gradient-to-r from-primary/10 to-primary/5 border-b border-border">
+              <div className="p-6 bg-accent2/20 border-b border-accent2/20">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
@@ -158,7 +163,7 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-accent2/20 px-3 py-1 rounded-full">
                       <Calendar className="h-4 w-4 text-accent2" />
                       <span className="text-accent2 font-medium">{project.period}</span>
                     </div>
@@ -219,6 +224,16 @@ const Projects = () => {
                         >
                           <ExternalLink className="mr-2 h-4 w-4" />
                           View Paper
+                        </Button>
+                      )}
+                      {project.reportLink && (
+                        <Button
+                          variant="accent"
+                          size="sm"
+                          onClick={() => window.open(project.reportLink!, '_blank')}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          View Report
                         </Button>
                       )}
                     </div>

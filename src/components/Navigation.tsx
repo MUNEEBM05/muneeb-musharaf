@@ -68,10 +68,10 @@ const Navigation = () => {
                 to={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={cn(
-                  "text-sm font-medium transition-colors link-hover",
+                  "text-sm font-medium transition-all duration-200 inline-block hover:scale-110",
                   isActive(item.href)
                     ? "text-accent"
-                    : "text-white/90 hover:text-white"
+                    : "text-white/90 hover:text-accent2"
                 )}
               >
                 {item.label}

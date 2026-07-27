@@ -185,6 +185,15 @@ export default {
 				'spin': {
 					from: { transform: 'rotate(0deg)' },
 					to: { transform: 'rotate(360deg)' }
+				},
+				'grow-down': {
+					'0%': { transform: 'scaleY(0)' },
+					'100%': { transform: 'scaleY(1)' }
+				},
+				'pop-in': {
+					'0%': { transform: 'scale(0)', opacity: '0' },
+					'70%': { transform: 'scale(1.15)', opacity: '1' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
@@ -205,7 +214,9 @@ export default {
 				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'gradient': 'gradient 8s ease infinite',
-				'spin-slow': 'spin 20s linear infinite'
+				'spin-slow': 'spin 20s linear infinite',
+				'grow-down': 'grow-down 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards',
+				'pop-in': 'pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
 			}
 		}
 	},
