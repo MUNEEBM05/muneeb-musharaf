@@ -19,7 +19,7 @@ const About = () => {
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             About Me
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ const About = () => {
           {/* Bio Section */}
           <div className="space-y-6 animate-fade-in">
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg card-lift">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">My Journey</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">My Journey</h2>
               <div className="space-y-4 text-slate-900">
                 <p>
                   I'm a final-year BSc Computer Science & Mathematics student at Queen Mary University of London, 
@@ -77,14 +77,14 @@ const About = () => {
           <div className="space-y-6">
             {/* Quick Facts */}
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg animate-slide-in-left">
-              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-6">Quick Facts</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 {quickFacts.map((fact, index) => {
                   const Icon = fact.icon;
                   return (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-secondary/50 rounded-xl hover:bg-secondary transition-colors"
+                      className="flex items-start gap-4 p-4 bg-accent2/10 rounded-xl hover:bg-accent2/20 transition-colors"
                     >
                       <div className="p-2 bg-accent/10 rounded-lg">
                         <Icon className="h-5 w-5 text-accent" />
@@ -105,7 +105,7 @@ const About = () => {
 
             {/* Current Focus */}
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 animate-slide-in-right">
-              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Current Focus</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Current Focus</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0"></span>
@@ -126,7 +126,7 @@ const About = () => {
 
             {/* Fun Facts */}
             <div className="bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 shadow-lg math-grid">
-              <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Beyond Code</h3>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Beyond Code</h3>
               <div className="space-y-3 text-muted-foreground">
                 <p>🎨 Landscape painting & sketching enthusiast</p>
                 <p>👨‍🏫 Mentor for university applications</p>

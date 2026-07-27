@@ -29,6 +29,9 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Hide whichever page you're currently on from the nav list
+  const visibleNavItems = navItems.filter((item) => item.href !== location.pathname);
+
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     if (location.pathname === href) {
       e.preventDefault();
@@ -59,7 +62,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden xl:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
@@ -111,7 +114,7 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}

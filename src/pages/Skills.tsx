@@ -51,7 +51,7 @@ const Skills = () => {
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Skills & Expertise
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ const Skills = () => {
                   <div className={`p-3 bg-${category.color}/10 rounded-xl`}>
                     <Icon className={`h-6 w-6 text-${category.color}`} />
                   </div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
                     {category.title}
                   </h3>
                 </div>
@@ -84,7 +84,7 @@ const Skills = () => {
                   {category.skills.map((skill, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1.5 bg-secondary/50 rounded-lg text-sm font-medium text-foreground hover:bg-secondary transition-all duration-300"
+                      className="px-3 py-1.5 bg-accent2/10 rounded-lg text-sm font-medium text-foreground hover:bg-accent2/20 transition-all duration-300"
                     >
                       {skill}
                     </span>
@@ -97,7 +97,7 @@ const Skills = () => {
 
         {/* Additional Skills Tags */}
         <div className="mt-12 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 animate-scale-in">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-6 text-center">
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-6 text-center">
             Additional Technologies & Tools
           </h3>
           <div className="flex flex-wrap justify-center gap-3">

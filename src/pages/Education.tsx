@@ -87,7 +87,7 @@ const Education = () => {
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Education
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -112,7 +112,7 @@ const Education = () => {
                 {/* Timeline Dot */}
                 <div className="relative z-10">
                   <div
-                    className="w-16 h-16 rounded-full bg-blue-950 flex items-center justify-center shadow-glow"
+                    className="w-16 h-16 rounded-full bg-accent2 flex items-center justify-center shadow-glow"
                   >
                     <GraduationCap className="h-8 w-8 text-white" />
                   </div>
@@ -127,7 +127,7 @@ const Education = () => {
                   <div className="relative bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 h-full">
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
                           {item.institution}
                         </h3>
                         {item.degree && (
@@ -137,9 +137,9 @@ const Education = () => {
                         )}
                       </div>
                       {item.period && (
-                        <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                          <Calendar className="h-4 w-4 text-blue-950" />
-                          <span className="text-sm font-medium text-blue-950">{item.period}</span>
+                        <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
+                          <Calendar className="h-4 w-4 text-accent2" />
+                          <span className="text-sm font-medium text-accent2">{item.period}</span>
                         </div>
                       )}
                     </div>
@@ -165,7 +165,7 @@ const Education = () => {
                           {item.modules.map((module, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1.5 bg-secondary/50 border border-secondary text-foreground rounded-full text-xs font-medium hover:bg-secondary/70 transition-all duration-300 cursor-pointer"
+                              className="px-3 py-1.5 bg-accent2/10 border border-accent2/30 text-foreground rounded-full text-xs font-medium hover:bg-accent2/20 transition-all duration-300 cursor-pointer"
                             >
                               {module}
                             </span>
@@ -196,7 +196,7 @@ const Education = () => {
                           {item.grades.map((grade, idx) => (
                             <div
                               key={idx}
-                              className="flex justify-between items-center p-3 bg-secondary/50 border border-secondary rounded-lg hover:bg-secondary/70 transition-all duration-300"
+                              className="flex justify-between items-center p-3 bg-accent2/10 border border-accent2/30 rounded-lg hover:bg-accent2/20 transition-all duration-300"
                             >
                               <span className="text-sm font-medium text-foreground">
                                 {grade.subject}
@@ -218,7 +218,7 @@ const Education = () => {
 
         {/* Achievements Summary */}
         <div className="mt-16 bg-gradient-to-br from-accent/10 to-teal/10 rounded-2xl p-8 text-center animate-scale-in">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <p className="text-3xl font-bold gradient-text">First-Class</p>

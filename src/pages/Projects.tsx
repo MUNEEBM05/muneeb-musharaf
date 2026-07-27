@@ -121,7 +121,7 @@ const Projects = () => {
       
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         <div className="text-center mb-12 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Showcasing full-stack development, AI/ML research, and software engineering
           </p>
@@ -144,7 +144,7 @@ const Projects = () => {
                         {project.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
+                        <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
                           {project.title}
                         </h3>
                         <p className="text-lg font-medium text-foreground mt-1">
@@ -158,9 +158,9 @@ const Projects = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                      <Calendar className="h-4 w-4 text-blue-950" />
-                      <span className="text-blue-950 font-medium">{project.period}</span>
+                    <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
+                      <Calendar className="h-4 w-4 text-accent2" />
+                      <span className="text-accent2 font-medium">{project.period}</span>
                     </div>
                     <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-medium self-start">
                       {project.projectCategory}
@@ -190,7 +190,7 @@ const Projects = () => {
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 bg-blue-950 rounded-full mt-1.5 flex-shrink-0"></span>
+                            <span className="w-1.5 h-1.5 bg-accent2 rounded-full mt-1.5 flex-shrink-0"></span>
                             <span className="text-sm text-muted-foreground">{highlight}</span>
                           </li>
                         ))}

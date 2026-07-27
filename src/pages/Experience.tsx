@@ -242,7 +242,7 @@ const Experience = () => {
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10">
         {/* Page Header */}
         <div className="text-center mb-12 animate-fade-up">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Experience
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -269,7 +269,7 @@ const Experience = () => {
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className="text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-500 bg-clip-text text-transparent">
+                          <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
                             {exp.company}
                           </h3>
                           {exp.certificates && exp.certificates.length > 0 && (
@@ -292,15 +292,15 @@ const Experience = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm">
-                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                      <Calendar className="h-4 w-4 text-blue-950" />
-                      <span className="text-blue-950 font-medium">{exp.period}</span>
+                    <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
+                      <Calendar className="h-4 w-4 text-accent2" />
+                      <span className="text-accent2 font-medium">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-secondary/50 px-3 py-1 rounded-full">
-                      <MapPin className="h-4 w-4 text-blue-950" />
-                      <span className="text-blue-950 font-medium">{exp.location}</span>
+                    <div className="flex items-center gap-2 bg-accent2/10 px-3 py-1 rounded-full">
+                      <MapPin className="h-4 w-4 text-accent2" />
+                      <span className="text-accent2 font-medium">{exp.location}</span>
                     </div>
-                    <span className="px-3 py-1 bg-secondary/50 rounded-full text-xs font-medium self-start text-foreground">
+                    <span className="px-3 py-1 bg-accent2/10 rounded-full text-xs font-medium self-start text-foreground">
                       {exp.type}
                     </span>
                   </div>
@@ -316,7 +316,7 @@ const Experience = () => {
                   <ul className="space-y-2">
                     {exp.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 bg-blue-950 rounded-full mt-1.5 flex-shrink-0"></span>
+                        <span className="w-1.5 h-1.5 bg-accent2 rounded-full mt-1.5 flex-shrink-0"></span>
                         <span className="text-muted-foreground text-sm">{highlight}</span>
                       </li>
                     ))}
@@ -363,7 +363,7 @@ const Experience = () => {
               {/* Expand Button */}
               <button
                 onClick={() => toggleExpand(index)}
-                className="w-full p-3 bg-secondary/30 hover:bg-secondary/50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
+                className="w-full p-3 bg-accent2/10 hover:bg-accent2/20 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
               >
                 {expandedCard === index ? (
                   <>
