@@ -48,6 +48,12 @@ export default {
 					foreground: 'hsl(var(--teal-foreground))',
 					light: 'hsl(var(--teal-light))'
 				},
+				glassFg: {
+					DEFAULT: 'hsl(var(--glass-fg))'
+				},
+				glassMuted: {
+					DEFAULT: 'hsl(var(--glass-muted))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

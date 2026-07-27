@@ -256,11 +256,11 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Card Header */}
-              <div className="p-6 bg-accent2/40 border-b border-accent2/40">
+              <div className="p-6 glass-card-header">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-4">
@@ -281,26 +281,26 @@ const Experience = () => {
                             </div>
                           )}
                         </div>
-                        <p className="text-lg font-medium text-foreground mt-1">
+                        <p className="text-lg font-medium text-glassFg mt-1">
                           {exp.role}
                         </p>
-                        <p className="text-sm text-muted-foreground mt-2">
+                        <p className="text-sm text-glassMuted mt-2">
                           {exp.description}
                         </p>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col gap-2 text-sm">
-                    <div className="flex items-center gap-2 bg-accent2/40 px-3 py-1 rounded-full">
-                      <Calendar className="h-4 w-4 text-accent2" />
-                      <span className="text-accent2 font-medium">{exp.period}</span>
+                    <div className="flex items-center gap-2 glass-pill px-3 py-1 rounded-full">
+                      <Calendar className="h-4 w-4 text-accent-hover" />
+                      <span className="text-accent-hover font-medium">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-teal/25 border border-teal/40 px-3 py-1 rounded-full">
-                      <MapPin className="h-4 w-4 text-teal" />
-                      <span className="text-teal font-medium">{exp.location}</span>
+                    <div className="flex items-center gap-2 glass-pill-alt px-3 py-1 rounded-full">
+                      <MapPin className="h-4 w-4 text-teal-light" />
+                      <span className="text-teal-light font-medium">{exp.location}</span>
                     </div>
-                    <span className="px-3 py-1 bg-teal/25 border border-teal/40 rounded-full text-xs font-medium self-start text-teal">
+                    <span className="px-3 py-1 glass-pill-alt rounded-full text-xs font-medium self-start text-teal-light">
                       {exp.type}
                     </span>
                   </div>
@@ -312,19 +312,19 @@ const Experience = () => {
                 expandedCard === index ? "max-h-[600px]" : "max-h-0"
               }`}>
                 <div className="p-6">
-                  <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
+                  <h4 className="font-semibold text-glassFg mb-3">Key Achievements:</h4>
                   <ul className="space-y-2">
                     {exp.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 bg-accent2 rounded-full mt-1.5 flex-shrink-0"></span>
-                        <span className="text-muted-foreground text-sm">{highlight}</span>
+                        <span className="w-1.5 h-1.5 bg-accent-hover rounded-full mt-1.5 flex-shrink-0"></span>
+                        <span className="text-glassMuted text-sm">{highlight}</span>
                       </li>
                     ))}
                   </ul>
 
                   {exp.certificates && exp.certificates.length > 0 && (
                     <div className="mt-6">
-                      <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                      <h4 className="font-semibold text-glassFg mb-3 flex items-center gap-2">
                         <Award className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                         Certificates & Badges
                       </h4>
@@ -363,7 +363,7 @@ const Experience = () => {
               {/* Expand Button */}
               <button
                 onClick={() => toggleExpand(index)}
-                className="w-full p-3 bg-accent2/40 hover:bg-accent2/50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
+                className="w-full p-3 glass-card-header hover:brightness-95 transition-all flex items-center justify-center gap-2 text-sm font-medium text-glassFg"
               >
                 {expandedCard === index ? (
                   <>

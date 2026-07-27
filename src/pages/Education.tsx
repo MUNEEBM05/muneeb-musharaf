@@ -18,7 +18,7 @@ const Education = () => {
     {
       institution: "University College London (UCL)",
       degree: "MSc Artificial Intelligence and Robotics",
-      period: "Oct 2026 – Present",
+      period: "Starting Oct 2026",
       scholarship: "Martingale Scholarship",
       bullets: [
         "Selected as 1 of 12 people nationwide to receive the Martingale Scholarship.",
@@ -128,10 +128,7 @@ const Education = () => {
                   </div>
 
                   {/* Content Card */}
-                  <div className="flex-1 relative bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
-                    {/* Gradient border effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
+                  <div className="flex-1 relative glass-card rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
                     {/* Inner content */}
                     <div className="relative rounded-2xl p-8 h-full">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
@@ -140,15 +137,15 @@ const Education = () => {
                             {item.institution}
                           </h3>
                           {item.degree && (
-                            <p className="text-lg font-medium text-foreground mt-1">
+                            <p className="text-lg font-medium text-glassFg mt-1">
                               {item.degree}
                             </p>
                           )}
                         </div>
                         {item.period && (
-                          <div className="flex items-center gap-2 bg-accent2/40 px-3 py-1 rounded-full">
-                            <Calendar className="h-4 w-4 text-accent2" />
-                            <span className="text-sm font-medium text-accent2">{item.period}</span>
+                          <div className="flex items-center gap-2 glass-pill px-3 py-1 rounded-full">
+                            <Calendar className="h-4 w-4 text-accent-hover" />
+                            <span className="text-sm font-medium text-accent-hover">{item.period}</span>
                           </div>
                         )}
                       </div>
@@ -156,30 +153,30 @@ const Education = () => {
                       {/* Grade Info */}
                       {item.grade && (
                         <div className="flex items-center gap-2 mb-4">
-                          <Award className="h-5 w-5 text-accent animate-pulse" />
-                          <span className="font-semibold text-accent text-lg">{item.grade}</span>
+                          <Award className="h-5 w-5 text-accent-hover animate-pulse" />
+                          <span className="font-semibold text-accent-hover text-lg">{item.grade}</span>
                         </div>
                       )}
 
                       {/* Scholarship Badge */}
                       {item.scholarship && (
-                        <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-gradient-to-r from-accent/20 to-accent2/20 border border-accent/40 rounded-full">
-                          <Rocket className="h-5 w-5 text-accent animate-pulse" />
-                          <span className="font-semibold text-accent text-lg">{item.scholarship}</span>
+                        <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 glass-pill-alt rounded-full">
+                          <Rocket className="h-5 w-5 text-teal-light animate-pulse" />
+                          <span className="font-semibold text-teal-light text-lg">{item.scholarship}</span>
                         </div>
                       )}
 
                       {/* Modules (for University) */}
                       {item.modules && (
                         <div>
-                          <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                          <p className="text-sm font-bold text-accent-hover mb-3 uppercase tracking-wider">
                             Key Modules:
                           </p>
                           <div className="flex flex-wrap gap-2">
                             {item.modules.map((module, idx) => (
                               <span
                                 key={idx}
-                                className="px-3 py-1.5 bg-accent2/40 border border-accent2/50 text-foreground rounded-full text-xs font-medium hover:bg-accent2/50 transition-all duration-300 cursor-pointer"
+                                className="px-3 py-1.5 glass-pill text-glassFg rounded-full text-xs font-medium hover:brightness-95 transition-all duration-300 cursor-pointer"
                               >
                                 {module}
                               </span>
@@ -190,10 +187,10 @@ const Education = () => {
 
                       {/* Bullet Points (for Scholarship) */}
                       {item.bullets && (
-                        <ul className="space-y-2 text-foreground">
+                        <ul className="space-y-2 text-glassFg">
                           {item.bullets.map((bullet, idx) => (
                             <li key={idx} className="text-sm leading-relaxed flex gap-2">
-                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                              <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent-hover shrink-0" />
                               <span>{bullet}</span>
                             </li>
                           ))}
@@ -203,19 +200,19 @@ const Education = () => {
                       {/* Grades (for A-Levels and GCSEs) */}
                       {item.grades && (
                         <div>
-                          <p className="text-sm font-bold text-accent mb-3 uppercase tracking-wider">
+                          <p className="text-sm font-bold text-accent-hover mb-3 uppercase tracking-wider">
                             Grades Achieved:
                           </p>
                           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                             {item.grades.map((grade, idx) => (
                               <div
                                 key={idx}
-                                className="flex justify-between items-center p-3 bg-accent2/40 border border-accent2/50 rounded-lg hover:bg-accent2/50 transition-all duration-300"
+                                className="flex justify-between items-center p-3 glass-pill rounded-lg hover:brightness-95 transition-all duration-300"
                               >
-                                <span className="text-sm font-medium text-foreground">
+                                <span className="text-sm font-medium text-glassFg">
                                   {grade.subject}
                                 </span>
-                                <span className="font-bold text-accent text-lg ml-2">
+                                <span className="font-bold text-accent-hover text-lg ml-2">
                                   {grade.grade}
                                 </span>
                               </div>
@@ -232,20 +229,20 @@ const Education = () => {
         </div>
 
         {/* Achievements Summary */}
-        <div className="mt-16 bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 text-center animate-scale-in">
+        <div className="mt-16 glass-card rounded-2xl p-8 text-center animate-scale-in">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <p className="text-3xl font-bold gradient-text">First-Class</p>
-              <p className="text-muted-foreground">University Average</p>
+              <p className="text-glassMuted">University Average</p>
             </div>
             <div>
               <p className="text-3xl font-bold gradient-text">2 × A*</p>
-              <p className="text-muted-foreground">Mathematics A-Levels</p>
+              <p className="text-glassMuted">Mathematics A-Levels</p>
             </div>
             <div>
               <p className="text-3xl font-bold gradient-text">11 GCSEs</p>
-              <p className="text-muted-foreground">Grades 6-9</p>
+              <p className="text-glassMuted">Grades 6-9</p>
             </div>
           </div>
         </div>

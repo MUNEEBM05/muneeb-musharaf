@@ -13,18 +13,18 @@ const Projects = () => {
     {
       title: "Virtual Mars: Gaussian Splatting",
       period: "Aug 2025 – May 2026",
-      description: "Exploring Gaussian Splatting to render scenes from NASA Mars rovers",
+      description: "Applied Gaussian Splatting to render immersive scenes from NASA Mars rover imagery",
       tech: ["Python", "3D Gaussian Splatting", "SfM", "Computer Vision"],
       features: ["3D Reconstruction", "Mars Rover Data", "Interactive Exploration", "Immersive Visualization"],
       role: "Lead Researcher",
       projectType: "Final Year Project",
-      projectCategory: "Ongoing Research",
+      projectCategory: "Completed Research",
       githubLink: null,
       paperLink: null,
       reportLink: "/virtual-mars-final-report.pdf",
       highlights: [
-        "Exploring the use of 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
-        "Aiming to create interactive 3D landscapes that allow seamless navigation of Martian terrain for scientific study and public exploration",
+        "Applied 3D Gaussian Splatting and Structure-from-Motion techniques to reconstruct immersive virtual scenes of Mars from NASA rover imagery (Curiosity & Perseverance)",
+        "Created interactive 3D landscapes allowing seamless navigation of Martian terrain for scientific study and public exploration",
         "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
       ],
       icon: <School className="h-5 w-5" />,
@@ -137,11 +137,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Header */}
-              <div className="p-6 bg-accent2/40 border-b border-accent2/40">
+              <div className="p-6 glass-card-header">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
@@ -152,22 +152,22 @@ const Projects = () => {
                         <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
                           {project.title}
                         </h3>
-                        <p className="text-lg font-medium text-foreground mt-1">
+                        <p className="text-lg font-medium text-glassFg mt-1">
                           {project.projectType}
                         </p>
-                        <p className="text-sm text-muted-foreground mt-2">
+                        <p className="text-sm text-glassMuted mt-2">
                           {project.description}
                         </p>
                       </div>
                     </div>
                   </div>
-                  
-                  <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2 bg-accent2/40 px-3 py-1 rounded-full">
-                      <Calendar className="h-4 w-4 text-accent2" />
-                      <span className="text-accent2 font-medium">{project.period}</span>
+
+                  <div className="flex flex-col gap-2 text-sm">
+                    <div className="flex items-center gap-2 glass-pill px-3 py-1 rounded-full">
+                      <Calendar className="h-4 w-4 text-accent-hover" />
+                      <span className="text-accent-hover font-medium">{project.period}</span>
                     </div>
-                    <span className="px-3 py-1 bg-teal/25 border border-teal/40 text-teal rounded-full text-xs font-medium self-start">
+                    <span className="px-3 py-1 glass-pill-alt text-teal-light rounded-full text-xs font-medium self-start">
                       {project.projectCategory}
                     </span>
                   </div>
@@ -178,10 +178,10 @@ const Projects = () => {
               <div className="p-6">
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm font-medium mb-2">Tech Stack:</p>
+                    <p className="text-sm font-medium mb-2 text-glassFg">Tech Stack:</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-secondary text-xs rounded-full">
+                        <span key={idx} className="px-3 py-1 bg-secondary text-secondary-foreground text-xs rounded-full">
                           {tech}
                         </span>
                       ))}
@@ -191,12 +191,12 @@ const Projects = () => {
                   {/* Expandable Highlights */}
                   {expandedIndex === index && (
                     <div className="animate-fade-up">
-                      <p className="text-sm font-medium mb-3">Key Highlights:</p>
+                      <p className="text-sm font-medium mb-3 text-glassFg">Key Highlights:</p>
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 bg-accent2 rounded-full mt-1.5 flex-shrink-0"></span>
-                            <span className="text-sm text-muted-foreground">{highlight}</span>
+                            <span className="w-1.5 h-1.5 bg-accent-hover rounded-full mt-1.5 flex-shrink-0"></span>
+                            <span className="text-sm text-glassMuted">{highlight}</span>
                           </li>
                         ))}
                       </ul>
@@ -242,7 +242,7 @@ const Projects = () => {
                       variant="ghost"
                       size="sm"
                       onClick={() => toggleExpand(index)}
-                      className="text-muted-foreground hover:text-primary"
+                      className="text-glassMuted hover:text-accent-hover"
                     >
                       {expandedIndex === index ? (
                         <>
