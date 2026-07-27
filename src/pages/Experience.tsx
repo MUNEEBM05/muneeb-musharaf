@@ -256,11 +256,11 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
+              className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Card Header */}
-              <div className="p-6 bg-accent2/20 border-b border-accent2/20">
+              <div className="p-6 bg-accent2/40 border-b border-accent2/40">
                 <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-4">
@@ -292,15 +292,15 @@ const Experience = () => {
                   </div>
                   
                   <div className="flex flex-col gap-2 text-sm">
-                    <div className="flex items-center gap-2 bg-accent2/20 px-3 py-1 rounded-full">
+                    <div className="flex items-center gap-2 bg-accent2/40 px-3 py-1 rounded-full">
                       <Calendar className="h-4 w-4 text-accent2" />
                       <span className="text-accent2 font-medium">{exp.period}</span>
                     </div>
-                    <div className="flex items-center gap-2 bg-accent2/20 px-3 py-1 rounded-full">
-                      <MapPin className="h-4 w-4 text-accent2" />
-                      <span className="text-accent2 font-medium">{exp.location}</span>
+                    <div className="flex items-center gap-2 bg-teal/25 border border-teal/40 px-3 py-1 rounded-full">
+                      <MapPin className="h-4 w-4 text-teal" />
+                      <span className="text-teal font-medium">{exp.location}</span>
                     </div>
-                    <span className="px-3 py-1 bg-accent2/20 rounded-full text-xs font-medium self-start text-foreground">
+                    <span className="px-3 py-1 bg-teal/25 border border-teal/40 rounded-full text-xs font-medium self-start text-teal">
                       {exp.type}
                     </span>
                   </div>
@@ -363,7 +363,7 @@ const Experience = () => {
               {/* Expand Button */}
               <button
                 onClick={() => toggleExpand(index)}
-                className="w-full p-3 bg-accent2/20 hover:bg-accent2/30 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
+                className="w-full p-3 bg-accent2/40 hover:bg-accent2/50 transition-colors flex items-center justify-center gap-2 text-sm font-medium"
               >
                 {expandedCard === index ? (
                   <>

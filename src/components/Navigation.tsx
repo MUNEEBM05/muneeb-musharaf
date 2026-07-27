@@ -55,7 +55,7 @@ const Navigation = () => {
             onClick={(e) => handleNavClick(e, "/")}
             className="flex items-center space-x-2"
           >
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 to-white bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent">
               Muneeb Musharaf
             </span>
           </Link>
@@ -71,7 +71,7 @@ const Navigation = () => {
                   "text-sm font-medium transition-all duration-200 inline-block hover:scale-110",
                   isActive(item.href)
                     ? "text-accent"
-                    : "text-white/90 hover:text-accent2"
+                    : "text-white/90 hover:text-accent"
                 )}
               >
                 {item.label}

@@ -16,13 +16,14 @@ const Education = () => {
   }, []);
   const education = [
     {
-      institution: "Martingale Scholarship",
-      degree: "",
-      period: "",
+      institution: "University College London (UCL)",
+      degree: "MSc Artificial Intelligence and Robotics",
+      period: "Oct 2026 – Present",
+      scholarship: "Martingale Scholarship",
       bullets: [
-        "Selected as 1 of 12 people to be in the scholarship.",
+        "Selected as 1 of 12 people nationwide to receive the Martingale Scholarship.",
         "Provides guaranteed funding for a postgraduate programme in Artificial Intelligence.",
-        "Confirmed: MSc in AI and Robotics at UCL, starting October 2026.",
+        "Starting the MSc in AI and Robotics at UCL in October 2026.",
       ],
       color: "accent",
       icon: Rocket,
@@ -112,7 +113,7 @@ const Education = () => {
               return (
                 <div
                   key={index}
-                  id={item.institution === "Martingale Scholarship" ? "martingale-scholarship" : undefined}
+                  id={item.scholarship ? "martingale-scholarship" : undefined}
                   className="relative flex gap-8 mb-12 animate-fade-in"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
@@ -127,7 +128,7 @@ const Education = () => {
                   </div>
 
                   {/* Content Card */}
-                  <div className="flex-1 relative bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-1 relative bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-[2px] shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
                     {/* Gradient border effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-teal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -145,7 +146,7 @@ const Education = () => {
                           )}
                         </div>
                         {item.period && (
-                          <div className="flex items-center gap-2 bg-accent2/20 px-3 py-1 rounded-full">
+                          <div className="flex items-center gap-2 bg-accent2/40 px-3 py-1 rounded-full">
                             <Calendar className="h-4 w-4 text-accent2" />
                             <span className="text-sm font-medium text-accent2">{item.period}</span>
                           </div>
@@ -160,6 +161,14 @@ const Education = () => {
                         </div>
                       )}
 
+                      {/* Scholarship Badge */}
+                      {item.scholarship && (
+                        <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-gradient-to-r from-accent/20 to-accent2/20 border border-accent/40 rounded-full">
+                          <Rocket className="h-5 w-5 text-accent animate-pulse" />
+                          <span className="font-semibold text-accent text-lg">{item.scholarship}</span>
+                        </div>
+                      )}
+
                       {/* Modules (for University) */}
                       {item.modules && (
                         <div>
@@ -170,7 +179,7 @@ const Education = () => {
                             {item.modules.map((module, idx) => (
                               <span
                                 key={idx}
-                                className="px-3 py-1.5 bg-accent2/20 border border-accent2/30 text-foreground rounded-full text-xs font-medium hover:bg-accent2/30 transition-all duration-300 cursor-pointer"
+                                className="px-3 py-1.5 bg-accent2/40 border border-accent2/50 text-foreground rounded-full text-xs font-medium hover:bg-accent2/50 transition-all duration-300 cursor-pointer"
                               >
                                 {module}
                               </span>
@@ -201,7 +210,7 @@ const Education = () => {
                             {item.grades.map((grade, idx) => (
                               <div
                                 key={idx}
-                                className="flex justify-between items-center p-3 bg-accent2/20 border border-accent2/30 rounded-lg hover:bg-accent2/30 transition-all duration-300"
+                                className="flex justify-between items-center p-3 bg-accent2/40 border border-accent2/50 rounded-lg hover:bg-accent2/50 transition-all duration-300"
                               >
                                 <span className="text-sm font-medium text-foreground">
                                   {grade.subject}
@@ -223,7 +232,7 @@ const Education = () => {
         </div>
 
         {/* Achievements Summary */}
-        <div className="mt-16 bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 text-center animate-scale-in">
+        <div className="mt-16 bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 text-center animate-scale-in">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>

@@ -31,32 +31,32 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Bio Section */}
           <div className="space-y-6 animate-fade-in">
-            <div className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 shadow-lg card-lift">
+            <div className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 shadow-lg card-lift">
               <h2 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">My Journey</h2>
               <div className="space-y-4 text-foreground">
                 <p>
-                  I'm a final-year BSc Computer Science & Mathematics student at Queen Mary University of London, 
-                  currently maintaining a First-Class average. My journey in tech has been driven by a deep 
-                  fascination with artificial intelligence and its potential to solve real-world problems.
+                  I graduated with a First-Class BSc in Computer Science & Mathematics from Queen Mary University
+                  of London. My journey in tech has been driven by a deep fascination with artificial intelligence
+                  and its potential to solve real-world problems.
                 </p>
                 <p>
-                  As a current tutor at London Science College and freelance programmer/annotator at Data Annotation, 
-                  I've developed strong skills in both teaching complex concepts and contributing to AI model training. 
-                  My recent completion of the Google DeepMind Research Ready programme has further solidified my 
-                  passion for AI/ML research. I have also recently submitted a paper to LLM4Music @ ISMIR 2025, titled{' '}
-                  <a 
-                    href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms" 
-                    target="_blank" 
+                  Along the way I completed the Google DeepMind Research Ready programme and co-authored{' '}
+                  <a
+                    href="https://openreview.net/forum?id=tXyh8CY9kZ&noteId=42aTjap4Ms"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-amber-500 hover:text-amber-400 transition-colors"
                   >
                     Evaluating Foundation Models on Timbre-Related Cognitive Tasks
-                  </a>.
+                  </a>, published at LLM4Music @ ISMIR 2025. I also spent several years tutoring Maths, Further
+                  Maths, Physics and Computer Science, first at London Science College and now through my own
+                  private tutoring practice, alongside freelance programming and data annotation work.
                 </p>
                 <p>
-                  Beyond academia, I enjoy landscape painting and sketching, which helps me maintain a creative 
-                  balance. I'm also passionate about mentorship, regularly helping sixth-form students with their 
-                  university applications and career guidance.
+                  I'm now preparing to start an MSc in AI and Robotics at UCL this October, funded by the
+                  Martingale Scholarship. Beyond academia, I enjoy landscape painting and sketching, and I'm
+                  passionate about mentorship, regularly helping sixth-form students with their university
+                  applications and career guidance.
                 </p>
               </div>
             </div>
@@ -76,7 +76,7 @@ const About = () => {
           {/* Quick Facts & Skills Overview */}
           <div className="space-y-6">
             {/* Quick Facts */}
-            <div className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 shadow-lg animate-slide-in-left">
+            <div className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 shadow-lg animate-slide-in-left">
               <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-6">Quick Facts</h3>
               <div className="space-y-4">
                 {quickFacts.map((fact, index) => {
@@ -84,7 +84,7 @@ const About = () => {
                   return (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-accent2/20 rounded-xl hover:bg-accent2/30 transition-colors"
+                      className="flex items-start gap-4 p-4 bg-accent2/40 rounded-xl hover:bg-accent2/50 transition-colors"
                     >
                       <div className="p-2 bg-accent/10 rounded-lg">
                         <Icon className="h-5 w-5 text-accent" />
@@ -104,7 +104,7 @@ const About = () => {
             </div>
 
             {/* Current Focus */}
-            <div className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 animate-slide-in-right">
+            <div className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 animate-slide-in-right">
               <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Current Focus</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -125,7 +125,7 @@ const About = () => {
             </div>
 
             {/* Fun Facts */}
-            <div className="bg-accent2/15 border border-accent2/25 backdrop-blur-sm rounded-2xl p-8 shadow-lg math-grid">
+            <div className="bg-accent2/35 border border-accent2/45 backdrop-blur-sm rounded-2xl p-8 shadow-lg math-grid">
               <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Beyond Code</h3>
               <div className="space-y-3 text-muted-foreground">
                 <p>🎨 Landscape painting & sketching enthusiast</p>
