@@ -133,7 +133,7 @@ const Education = () => {
                     <div className="relative rounded-2xl p-8 h-full">
                       <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                         <div>
-                          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
+                          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent">
                             {item.institution}
                           </h3>
                           {item.degree && (
@@ -230,7 +230,7 @@ const Education = () => {
 
         {/* Achievements Summary */}
         <div className="mt-16 glass-card rounded-2xl p-8 text-center animate-scale-in">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-4">Academic Highlights</h3>
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
               <p className="text-3xl font-bold gradient-text">First-Class</p>

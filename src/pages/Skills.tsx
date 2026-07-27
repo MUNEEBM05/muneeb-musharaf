@@ -74,7 +74,7 @@ const Skills = () => {
                   <div className="p-3 glass-pill-alt rounded-xl transition-all duration-300 group-hover:brightness-95 group-hover:scale-110 group-hover:rotate-6">
                     <Icon className="h-6 w-6 text-teal-light" />
                   </div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent">
                     {category.title}
                   </h3>
                 </div>
@@ -97,7 +97,7 @@ const Skills = () => {
 
         {/* Additional Skills Tags */}
         <div className="mt-12 glass-card rounded-2xl p-8 animate-scale-in">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent mb-6 text-center">
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-6 text-center">
             Additional Technologies & Tools
           </h3>
           <div className="flex flex-wrap justify-center gap-3">

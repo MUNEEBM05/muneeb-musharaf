@@ -149,7 +149,7 @@ const Projects = () => {
                         {project.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">
+                        <h3 className="text-xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent">
                           {project.title}
                         </h3>
                         <p className="text-lg font-medium text-glassFg mt-1">

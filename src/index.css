@@ -97,13 +97,13 @@ All colors MUST be HSL.
 
     --sidebar-ring: 188 86% 53%;
 
-    /* Glass card system - light, seamless off-white/blue/purple tint for content cards on the dark animated background */
-    --glass-cyan: 188 90% 95%;
-    --glass-blue: 217 88% 95%;
-    --glass-purple: 271 80% 96%;
-    --glass-border: 217 55% 82%;
-    --glass-fg: 222 47% 15%;
-    --glass-muted: 222 20% 38%;
+    /* Glass card system - a single light sky-blue tint (matches the user's picked #a3e7ff), moderately
+       translucent so it reads clearly as light blue while still letting a hint of the background through */
+    --glass-blue: 196 100% 82%;
+    --glass-purple: 271 75% 88%;
+    --glass-border: 196 65% 62%;
+    --glass-fg: 222 47% 14%;
+    --glass-muted: 222 20% 35%;
   }
 
   .dark {
@@ -254,42 +254,38 @@ All colors MUST be HSL.
   }
 
   /* Glass card - the primary "square" surface used across About/Education/Experience/Projects/Skills.
-     Light, seamless cyan -> blue -> purple tint (matching the background animation's palette) so text
-     stays readable against the dark background while still popping with colour. */
+     A single light sky-blue tint, only lightly transparent so it stays readable while still letting a
+     hint of the animated background show through at the edges. */
   .glass-card {
-    background-image: linear-gradient(
-      135deg,
-      hsl(var(--glass-cyan) / 0.94),
-      hsl(var(--glass-blue) / 0.92) 55%,
-      hsl(var(--glass-purple) / 0.9)
-    );
-    border: 1px solid hsl(var(--glass-border) / 0.5);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background-color: hsl(var(--glass-blue) / 0.78);
+    border: 1px solid hsl(var(--glass-border) / 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     color: hsl(var(--glass-fg));
   }
 
   /* Slightly stronger header strip variant, used at the top of expandable cards */
   .glass-card-header {
-    background-image: linear-gradient(
-      120deg,
-      hsl(var(--glass-blue) / 0.55),
-      hsl(var(--glass-purple) / 0.45)
-    );
+    background-color: hsl(var(--glass-blue) / 0.55);
     border-bottom: 1px solid hsl(var(--glass-border) / 0.4);
   }
 
   /* Small pill / chip surfaces (dates, locations, modules, tags) */
   .glass-pill {
-    background-color: hsl(var(--glass-blue) / 0.85);
-    border: 1px solid hsl(var(--glass-border) / 0.55);
+    background-color: hsl(var(--glass-blue) / 0.88);
+    border: 1px solid hsl(var(--glass-border) / 0.6);
     color: hsl(var(--glass-fg));
   }
 
   /* Purple-leaning pill variant for colour variety (kept from the same seamless palette) */
   .glass-pill-alt {
-    background-color: hsl(var(--glass-purple) / 0.78);
+    background-color: hsl(var(--glass-purple) / 0.8);
     border: 1px solid hsl(271 55% 78% / 0.6);
     color: hsl(var(--glass-fg));
+  }
+
+  /* Internal divider for sections stacked inside a single glass-card */
+  .glass-divider {
+    border-color: hsl(var(--glass-border) / 0.35);
   }
 }
