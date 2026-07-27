@@ -32,7 +32,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative flex items-start justify-center pb-8 md:pb-12" style={{ backgroundColor: 'rgba(12,15,34,255)' }}>
+    <section className="min-h-screen relative flex items-start justify-center pb-8 md:pb-12" style={{ backgroundColor: '#000000' }}>
       {/* Minimal Background Effect */}
       <div className="absolute inset-0">
         {/* Very subtle gradient overlay */}

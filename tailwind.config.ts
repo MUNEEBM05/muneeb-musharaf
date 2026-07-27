@@ -40,6 +40,9 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))',
 					hover: 'hsl(var(--accent-hover))'
 				},
+				accent2: {
+					DEFAULT: 'hsl(var(--accent-2))'
+				},
 				teal: {
 					DEFAULT: 'hsl(var(--teal))',
 					foreground: 'hsl(var(--teal-foreground))',

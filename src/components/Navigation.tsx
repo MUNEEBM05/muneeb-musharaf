@@ -42,7 +42,7 @@ const Navigation = () => {
         "fixed top-0 left-0 right-0 z-[9999] transition-all duration-300",
         isScrolled && "shadow-lg border-b border-white/10"
       )}
-      style={{ backgroundColor: 'rgba(12,15,34,0.97)' }}
+      style={{ backgroundColor: 'rgba(0,0,0,0.92)' }}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -107,7 +107,7 @@ const Navigation = () => {
           "xl:hidden absolute top-full left-0 right-0 border-b border-white/10 transition-all duration-300 overflow-hidden",
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
         )}
-        style={{ backgroundColor: 'rgba(12,15,34,0.99)' }}
+        style={{ backgroundColor: 'rgba(0,0,0,0.97)' }}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">

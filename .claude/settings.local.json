@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir src *)",
+      "Bash(cp \"C:\\\\Users\\\\munee\\\\Desktop\\\\CV\\\\Relevant Info\\\\MuneebMusharafCV.pdf\" \"C:\\\\Users\\\\munee\\\\Desktop\\\\muneeb-musharaf\\\\public\\\\MuneebMusharafCV.pdf\" && echo \"CV copied successfully\")"
+    ]
+  }
+}
