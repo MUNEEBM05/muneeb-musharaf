@@ -281,7 +281,7 @@ const Experience = () => {
                             </div>
                           )}
                         </div>
-                        <p className="text-lg font-medium text-glassFg mt-1">
+                        <p className="text-lg font-bold text-glassFg mt-1">
                           {exp.role}
                         </p>
                         <p className="text-sm text-glassMuted mt-2">

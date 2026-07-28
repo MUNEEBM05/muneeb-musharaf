@@ -137,7 +137,7 @@ const Education = () => {
                             {item.institution}
                           </h3>
                           {item.degree && (
-                            <p className="text-lg font-medium text-glassFg mt-1">
+                            <p className="text-lg font-bold text-glassFg mt-1">
                               {item.degree}
                             </p>
                           )}

@@ -152,7 +152,7 @@ const Projects = () => {
                         <h3 className="text-xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent">
                           {project.title}
                         </h3>
-                        <p className="text-lg font-medium text-glassFg mt-1">
+                        <p className="text-lg font-bold text-glassFg mt-1">
                           {project.projectType}
                         </p>
                         <p className="text-sm text-glassMuted mt-2">

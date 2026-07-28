@@ -108,7 +108,7 @@ const About = () => {
                         <p className="text-sm font-medium text-glassMuted">
                           {fact.label}
                         </p>
-                        <p className="text-base font-semibold text-glassFg">
+                        <p className="text-base font-bold text-glassFg">
                           {fact.value}
                         </p>
                       </div>
@@ -130,7 +130,7 @@ const About = () => {
                         <Icon className="h-4 w-4 text-accent-hover" />
                       </span>
                       <div className="text-glassMuted">
-                        <p className="font-medium mb-0.5 text-glassFg">{item.title}</p>
+                        <p className="font-bold mb-0.5 text-glassFg">{item.title}</p>
                         <p className="text-sm">{item.description}</p>
                       </div>
                     </li>
