@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import { Calendar, MapPin, ChevronDown, ChevronUp, Award, Download } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -221,6 +221,34 @@ const Experience = () => {
     },
   ];
 
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>(() =>
+    new Array(experiences.length).fill(false)
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number((entry.target as HTMLElement).dataset.index);
+            setVisibleCards((prev) => {
+              if (prev[idx]) return prev;
+              const next = [...prev];
+              next[idx] = true;
+              return next;
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+    );
+
+    cardRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const toggleExpand = (index: number) => {
     setExpandedCard(expandedCard === index ? null : index);
   };
@@ -256,8 +284,11 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              data-index={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`glass-card rounded-2xl shadow-lg overflow-hidden card-lift transition-all duration-700 ease-out ${
+                visibleCards[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
             >
               {/* Card Header */}
               <div className="p-6 glass-card-header">

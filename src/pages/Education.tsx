@@ -114,7 +114,7 @@ const Education = () => {
                 <div
                   key={index}
                   id={item.scholarship ? "martingale-scholarship" : undefined}
-                  className="relative flex gap-8 mb-12 animate-fade-in"
+                  className="relative flex gap-8 mb-12 animate-fade-in scroll-mt-28"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   {/* Timeline Dot */}

@@ -4,11 +4,11 @@ import PageBackground from "@/components/PageBackground";
 import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers, Brain, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Projects = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  
+
   const projects = [
     {
       title: "Virtual Mars: Gaussian Splatting",
@@ -115,6 +115,34 @@ const Projects = () => {
     },
   ];
 
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>(() =>
+    new Array(projects.length).fill(false)
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number((entry.target as HTMLElement).dataset.index);
+            setVisibleCards((prev) => {
+              if (prev[idx]) return prev;
+              const next = [...prev];
+              next[idx] = true;
+              return next;
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -80px 0px" }
+    );
+
+    cardRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
@@ -137,8 +165,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              data-index={index}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className={`glass-card rounded-2xl shadow-lg overflow-hidden card-lift transition-all duration-700 ease-out ${
+                visibleCards[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
             >
               {/* Project Header */}
               <div className="p-6 glass-card-header">
