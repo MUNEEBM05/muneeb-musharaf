@@ -66,8 +66,7 @@ const Skills = () => {
             return (
               <div
                 key={index}
-                className="group glass-card rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-fade-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group glass-card rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-6">
@@ -96,7 +95,7 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills Tags */}
-        <div className="mt-12 glass-card rounded-2xl p-8 animate-scale-in">
+        <div className="mt-12 glass-card rounded-2xl p-8">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-6 text-center">
             Additional Technologies & Tools
           </h3>

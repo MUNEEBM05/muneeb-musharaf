@@ -22,7 +22,7 @@ const NotFound = () => {
       <Navigation />
 
       <main className="container mx-auto px-4 pt-24 pb-12 relative z-10 flex items-center justify-center min-h-screen">
-        <div className="glass-card rounded-2xl p-10 md:p-16 text-center max-w-lg mx-auto animate-scale-in">
+        <div className="glass-card rounded-2xl p-10 md:p-16 text-center max-w-lg mx-auto">
           <p className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-4">
             404
           </p>

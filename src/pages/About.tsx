@@ -48,7 +48,7 @@ const About = () => {
         {/* Main Content - bio on the left, everything else grouped together on the right */}
         <div className="grid lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
           {/* Bio Section */}
-          <div className="glass-card rounded-2xl p-8 shadow-lg card-lift animate-fade-in">
+          <div className="glass-card rounded-2xl p-8 shadow-lg card-lift">
             <h2 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-4">My Journey</h2>
             <div className="space-y-4 text-glassFg">
               <p>
@@ -89,7 +89,7 @@ const About = () => {
           </div>
 
           {/* Everything else, grouped into one card so it reads together */}
-          <div className="glass-card rounded-2xl p-8 shadow-lg animate-fade-in">
+          <div className="glass-card rounded-2xl p-8 shadow-lg">
             {/* Quick Facts */}
             <div>
               <h3 className="text-xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-4">Quick Facts</h3>

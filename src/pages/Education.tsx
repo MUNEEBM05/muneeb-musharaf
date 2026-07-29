@@ -115,8 +115,7 @@ const Education = () => {
                 <div
                   key={index}
                   id={item.scholarship ? "martingale-scholarship" : undefined}
-                  className="relative flex gap-8 mb-12 animate-fade-in scroll-mt-28"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  className="relative flex gap-8 mb-12 scroll-mt-28"
                 >
                   {/* Timeline Dot */}
                   <div className="relative z-10">
@@ -230,7 +229,7 @@ const Education = () => {
         </div>
 
         {/* Achievements Summary */}
-        <div className="mt-16 glass-card rounded-2xl p-8 text-center animate-scale-in">
+        <div className="mt-16 glass-card rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-accent via-accent2 to-teal bg-clip-text text-transparent mb-4">Academic Highlights</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>

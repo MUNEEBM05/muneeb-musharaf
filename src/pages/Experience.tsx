@@ -256,8 +256,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift animate-fade-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="glass-card rounded-2xl shadow-lg overflow-hidden card-lift"
             >
               {/* Card Header */}
               <div className="p-6 glass-card-header">
