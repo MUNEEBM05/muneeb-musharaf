@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import { GraduationCap, Calendar, Award, Rocket, BookOpen, School } from "lucide-react";
+import CountUp from "@/components/CountUp";
 
 const Education = () => {
   useEffect(() => {
@@ -237,11 +238,15 @@ const Education = () => {
               <p className="text-glassMuted">University Average</p>
             </div>
             <div>
-              <p className="text-3xl font-bold gradient-text">2 × A*</p>
+              <p className="text-3xl font-bold gradient-text">
+                <CountUp target={2} suffix=" × A*" />
+              </p>
               <p className="text-glassMuted">Mathematics A-Levels</p>
             </div>
             <div>
-              <p className="text-3xl font-bold gradient-text">11 GCSEs</p>
+              <p className="text-3xl font-bold gradient-text">
+                <CountUp target={11} suffix=" GCSEs" />
+              </p>
               <p className="text-glassMuted">Grades 6-9</p>
             </div>
           </div>

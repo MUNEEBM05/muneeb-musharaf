@@ -12,6 +12,11 @@ const AnimatedTechBackground = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     let width = 0;
     let height = 0;
 
@@ -87,16 +92,20 @@ const AnimatedTechBackground = () => {
         ctx.fill();
         ctx.restore();
 
-        n.x += n.vx;
-        n.y += n.vy;
+        if (!prefersReducedMotion) {
+          n.x += n.vx;
+          n.y += n.vy;
 
-        if (n.x < 0 || n.x > width) n.vx *= -1;
-        if (n.y < 0 || n.y > height) n.vy *= -1;
-        n.x = Math.max(0, Math.min(width, n.x));
-        n.y = Math.max(0, Math.min(height, n.y));
+          if (n.x < 0 || n.x > width) n.vx *= -1;
+          if (n.y < 0 || n.y > height) n.vy *= -1;
+          n.x = Math.max(0, Math.min(width, n.x));
+          n.y = Math.max(0, Math.min(height, n.y));
+        }
       });
 
-      animationId = requestAnimationFrame(animate);
+      if (!prefersReducedMotion) {
+        animationId = requestAnimationFrame(animate);
+      }
     };
 
     animate();

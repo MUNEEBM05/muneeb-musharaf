@@ -7,8 +7,8 @@ const Footer = () => {
     { label: "About", href: "/about" },
     { label: "Education", href: "/education" },
     { label: "Experience", href: "/experience" },
+    { label: "Skills", href: "/skills" },
     { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
               Muneeb Musharaf
             </h3>
             <p className="text-sm text-primary-foreground/80">
-              Final-year BSc Computer Science & Mathematics student at QMUL
+              First-Class BSc Computer Science & Mathematics graduate, heading to UCL for an MSc in AI and Robotics
             </p>
             <div className="flex gap-3">
               <a
