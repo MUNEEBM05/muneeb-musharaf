@@ -25,7 +25,7 @@ const About = () => {
     {
       icon: GraduationCap,
       title: "Preparing for UCL",
-      description: "Getting ready to start the MSc in AI and Robotics at UCL this October, funded by the Martingale Scholarship.",
+      description: "Getting ready to start the MSc in Robotics and Artificial Intelligence at UCL this October, funded by the Martingale Scholarship.",
     },
   ];
 
@@ -70,7 +70,7 @@ const About = () => {
                 private tutoring practice, alongside freelance programming and data annotation work.
               </p>
               <p>
-                I'm now preparing to start an MSc in AI and Robotics at UCL this October, funded by the
+                I'm now preparing to start an MSc in Robotics and Artificial Intelligence at UCL this October, funded by the
                 Martingale Scholarship. Beyond academia, I enjoy landscape painting and sketching, and I'm
                 passionate about mentorship, regularly helping sixth-form students with their university
                 applications and career guidance.

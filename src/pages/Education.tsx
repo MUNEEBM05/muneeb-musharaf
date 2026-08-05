@@ -18,13 +18,13 @@ const Education = () => {
   const education = [
     {
       institution: "University College London (UCL)",
-      degree: "MSc Artificial Intelligence and Robotics",
+      degree: "MSc Robotics and Artificial Intelligence",
       period: "Starting Oct 2026",
       scholarship: "Martingale Scholarship",
       bullets: [
         "Selected as 1 of 12 people nationwide to receive the Martingale Scholarship.",
-        "Provides guaranteed funding for a postgraduate programme in Artificial Intelligence.",
-        "Starting the MSc in AI and Robotics at UCL in October 2026.",
+        "Provides guaranteed funding for a postgraduate programme in Robotics and Artificial Intelligence.",
+        "Starting the MSc in Robotics and Artificial Intelligence at UCL in October 2026.",
       ],
       color: "accent",
       icon: Rocket,

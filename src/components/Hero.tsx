@@ -94,7 +94,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0">
-                First-Class BSc Computer Science & Mathematics graduate from QMUL, heading to UCL for an MSc in AI and Robotics under the Martingale Scholarship.
+                First-Class BSc Computer Science & Mathematics graduate from QMUL, heading to UCL for an MSc in Robotics and Artificial Intelligence under the Martingale Scholarship.
               </p>
             </div>
 

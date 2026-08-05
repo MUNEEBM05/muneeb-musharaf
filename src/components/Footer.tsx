@@ -21,7 +21,7 @@ const Footer = () => {
               Muneeb Musharaf
             </h3>
             <p className="text-sm text-primary-foreground/80">
-              First-Class BSc Computer Science & Mathematics graduate, heading to UCL for an MSc in AI and Robotics
+              First-Class BSc Computer Science & Mathematics graduate, heading to UCL for an MSc in Robotics and Artificial Intelligence
             </p>
             <div className="flex gap-3">
               <a
