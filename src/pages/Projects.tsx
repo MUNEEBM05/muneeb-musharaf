@@ -11,6 +11,27 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Behaviour Cloning for a Mobile Manipulator",
+      period: "Oct 2026 – Nov 2026",
+      description: "Trained neural-network controllers to imitate an expert for a simulated mobile manipulator in PyBullet",
+      tech: ["Python", "NumPy", "PyBullet", "Bayesian Optimisation", "Kalman Filter"],
+      features: ["Imitation Learning", "Robot Control", "Sensor Noise Handling", "DAgger", "Reproducible Results"],
+      role: "Team Member (team of 3)",
+      projectType: "UCL MSc Group Project",
+      projectCategory: "Robotics & ML",
+      githubLink: null,
+      paperLink: null,
+      reportLink: null,
+      highlights: [
+        "Trained neural-network controllers to imitate an expert for a 7-joint Kinova arm on a Robotnik base, mapping robot state and target to 7 arm torques and 4 wheel speeds every 1 ms",
+        "Tuned the arm network with Bayesian optimisation (12 trials) and added a Kalman filter against sensor noise and command delay",
+        "The final system held the hand within 1 cm of the target for 5 s in 90% of unseen scenes and 81.3% across an 8-condition stress test (expert: 96.7%)",
+        "Built a fully learned arm-and-wheel controller (84–90% across 3 seeds) with ablations and DAgger",
+        "Wrote a one-command reproduction script that loads all 43 trained models and re-checks all 48 reported results"
+      ],
+      icon: <Users className="h-5 w-5" />,
+    },
+    {
       title: "Virtual Mars: Gaussian Splatting",
       period: "Aug 2025 – May 2026",
       description: "Applied Gaussian Splatting to render immersive scenes from NASA Mars rover imagery",
