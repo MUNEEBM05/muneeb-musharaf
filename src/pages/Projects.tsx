@@ -19,7 +19,7 @@ const Projects = () => {
       role: "Lead Researcher",
       projectType: "Final Year Project",
       projectCategory: "Completed Research",
-      githubLink: null,
+      githubLink: "https://github.com/MUNEEBM05/Virtual_Mars",
       paperLink: null,
       reportLink: "/virtual-mars-final-report.pdf",
       highlights: [
