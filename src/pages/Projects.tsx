@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
-import { Github, Calendar, Code, ChevronDown, ChevronUp, Users, User, School, Layers, Brain, ExternalLink } from "lucide-react";
+import { Github, Calendar, ChevronDown, ChevronUp, ExternalLink, Bot, AudioWaveform, Bitcoin, Blocks } from "lucide-react";
+import { MarsIcon, HorseIcon } from "@/components/ProjectIcons";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
@@ -29,7 +30,7 @@ const Projects = () => {
         "Built a fully learned arm-and-wheel controller (84–90% across 3 seeds) with ablations and DAgger",
         "Wrote a one-command reproduction script that loads all 43 trained models and re-checks all 48 reported results"
       ],
-      icon: <Users className="h-5 w-5" />,
+      icon: <Bot className="h-5 w-5" />,
     },
     {
       title: "Virtual Mars: Gaussian Splatting",
@@ -48,7 +49,7 @@ const Projects = () => {
         "Created interactive 3D landscapes allowing seamless navigation of Martian terrain for scientific study and public exploration",
         "Co-supervised by Prof. Cédric John (DERI) and Dr. M. Hansard, with applications in computer vision, planetary science, and immersive visualization"
       ],
-      icon: <School className="h-5 w-5" />,
+      icon: <MarsIcon className="h-5 w-5" />,
     },
     {
       title: "Evaluating Foundation Models on Timbre-Related Cognitive Tasks",
@@ -69,7 +70,7 @@ const Projects = () => {
         "Paper accepted to LLM4Music @ ISMIR 2025, a leading international venue for music information retrieval and AI",
         "Contributed to emerging understanding of whether LLMs can model subtle auditory concepts beyond surface-level pattern recognition"
       ],
-      icon: <Brain className="h-5 w-5" />,
+      icon: <AudioWaveform className="h-5 w-5" />,
     },
     {
       title: "Cryptocurrency Trading Platform",
@@ -90,7 +91,7 @@ const Projects = () => {
         "Integrated external API feeds for live cryptocurrency data",
         "Documented system design with UML diagrams and applied Agile project management practices"
       ],
-      icon: <Users className="h-5 w-5" />,
+      icon: <Bitcoin className="h-5 w-5" />,
     },
     {
       title: "Tetris Game",
@@ -111,7 +112,7 @@ const Projects = () => {
         "Managed source code with Git for version control and versioned releases",
         "Enhanced understanding of software lifecycle and user-centred design through iterative improvements"
       ],
-      icon: <User className="h-5 w-5" />,
+      icon: <Blocks className="h-5 w-5" />,
     },
     {
       title: "Horse Race Simulator",
@@ -132,7 +133,7 @@ const Projects = () => {
         "Incorporated probability and simulation logic to generate realistic race outcomes",
         "Strengthened Java programming skills through debugging, testing, and iterative development"
       ],
-      icon: <School className="h-5 w-5" />,
+      icon: <HorseIcon className="h-5 w-5" />,
     },
   ];
 
